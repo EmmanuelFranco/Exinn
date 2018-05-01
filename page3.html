@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<!-- Script para deslizar!-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
+		type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript" >
+		$(function(){
+
+     $('a[href*=#]').click(function() {
+
+     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+
+             var $target = $(this.hash);
+
+             $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+
+             if ($target.length) {
+
+                 var targetOffset = $target.offset().top;
+
+                 $('html,body').animate({scrollTop: targetOffset}, 1000);
+
+                 return false;
+            }
+       }
+   });
+});
+
+
+</script>
+<style>
+
+.animate-bottom{
+background-color: #F5F5F5;
+padding-bottom: 140px;}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.menu{
+    padding-left: 15%;
+}
+
+.menu ul a{
+    color:transparent;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+	.portada2{	
+    background: black;
+    
+    
+	}
+
+    .form {
+        background-color: #45a049;
+        margin:0;
+        padding:0;
+    }
+.buscadores{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  float:left;
+  
+  margin-left: auto;
+  margin-right: auto;
+
+}
+</style>
+	<head>
+		<title>Open Design</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="css/index.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Heebo:800" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style type="text/css" media="screen">
+		A:link {color: grey; text-decoration: none }
+		A:hover {color: white; text-decoration: none }
+		A:visited {color: grey; text-decoration: none }
+		#link { color: grey; text-decoration: none }
+		</style>
+
+	</head>
+	<body  onload="myFunction()" style="margin:0;"> 	
+
+		<section id= "portada" class= "portada2"> <!--Portada-->
+
+		<div class="header2" id=myHeader> <!--Header-->
+	
+					<div class="headerText"> <!--Header-->
+
+								<figure class= "logotipo"> <!-- Logotipo -->
+                
+               
+
+
+								<a href = index.html>
+								
+								<a href  = index.html >  Open Design </a>
+
+								</figure>
+					
+   
+<form action="http://18.218.177.65/advancedSearch.php" method="get" >
+    <div class= "Buscadores">
+                <input type="text" id="buscar" name="buscar" placeholder="Buscar">
+
+                <input type="text" id="campo" name="campo" placeholder="Campo que desea buscar">
+               </div>
+    <button>Enviar</button>
+ 
+</form>
+
+  </div>
+</div>
+
+	</body>
+</html>
+
+		
+
