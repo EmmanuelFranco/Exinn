@@ -28,6 +28,8 @@
    });
 });
 
+
+
 		</script>
 <script>
 	$("#slider > div:gt(0)").hide();
@@ -39,10 +41,31 @@ setInterval(function() {
     .fadeIn(250)
     .end()
     .appendTo('#slider');
-},  2000);
+},  60000);
 </script>
+<script type="text/javascript">
+// Este script es para achicar el header
+$(document).scroll(function() {
+  navbarScroll();
+});
+
+function navbarScroll() {
+  var y = window.scrollY;
+  if (y > 70) {
+    $('.footer').addClass('smallerfooter');
+		
+
+  } else if (y < 70) {
+    $('.footer').removeClass('smallerfooter');
+	//document.getElementById("body").style.animation = "exampls";
+ 	//document.getElementById("body").style.animationFillMode = "forwards";
 
 
+
+  }
+  
+}		
+</script>
 
 	<head>
 		<title>Exinn</title>
@@ -66,7 +89,8 @@ setInterval(function() {
 		</style>
 
 	</head>
-	<body> 	
+	<body id= "body"> 	
+		
 <div id="container1">
     <div id="container2">
 
@@ -91,14 +115,14 @@ setInterval(function() {
 												<a href = #equipo> Propuestas</a>
 											</li>
 											<li>
-												<a href = #Actividades> Registro de marca</a>
+												<a href = #Registro> Registro de marca</a>
 											</li>
 											<li>
 												<a href = #tecnologias> Precios </a>
 											</li>
 											
 											<li>
-												<a href = page2.html>  Departamento de Legales </a>
+												<a href = #Legales>  Departamento de Legales </a>
 											</li>
 
 											<li>
@@ -215,7 +239,7 @@ en formato web y en soporte papel <br> todo, absolutamente sin ningún costo adi
 			</div>
 
 			<div>
-		      	<input type="submit" value="Send Message">
+		      	<input type="submit" value="Enviar Mensaje">
 		    </div>
 		</fieldset>
 	</form>
@@ -226,14 +250,205 @@ en formato web y en soporte papel <br> todo, absolutamente sin ningún costo adi
 		</div>
 	
  
-</div>
-</div>
-
 
 
 
 		</section>
-			
+		</div>
+</div>
+<div class= "gris">	
+<section id= "Registro">
+	
+
+<div class= "wrapper">
+
+		<h3> REGISTRO DE MARCA:</h3>
+		<h3> ¿Cómo se registra una marca?</h3>
+											
+											<li>
+												<h4>Se registran distintos tipo de marcas, ya sea compuesta por el nombre que identificara el producto o servicio, por un logo o por ambos.
+											</li>
+											<li>
+												<h4>El primer paso que se debe realizar es verificar la viabilidad, hacer un estudio preliminar y buscar los antecedentes que puedan tener la marca que se quiere registrar evitando  conflictos con las marcas que ya están registradas, pudiendo en caso de haber alguna similar correr el riesgo de una denegatoria o una oposición, con este examen previo se asegura el éxito de la solicitud que se presenta.</h4>
+											</li>
+											<li>
+												<h4> Registro del cliente: ingresando sus datos personales a través de la web, via e mail, telefónicamente o personalmente se procesaran los datos para la solicitud que se presenta en el Instituto Nacional de Propiedad Industrial INPI y se emite la factura correspondiente.</h4>
+
+											</li>
+											<li>
+												<h4>Pago: emitida la factura se deberá efectuar el pago  a través de depósito bancario, transferencia o pago con tarjeta de crédito, una vez acreditado se emitirá la factura A o B de cancelación.</h4>
+
+											</li>
+											
+											<li>
+												<h4>Presentación en el registro: se presenta la solicitud con prioridad en el tiempo y sin gastos extras, con la inmediatez necesaria para asegurar su prioridad y el éxito del registro, se asignara un número de acta que será informado para que pueda tener un seguimiento personal de sus registros.</h4>
+
+											</li>
+												<h4>Custodia; se realiza una custodia permanente durante todo el procedimiento, a fin de asegurar que todos los trámites legales y administrativos que puedan presentarse, sean resuelto por nuestros especialistas en tiempo y forma.</h4>
+
+											<li>
+												<h4>Retiro y entrega del título de concesión de su marca registrada: finalizado el trámite, se le hará entrega vía web y en formato papel del título emitido por las autoridades del INPI, acreditando la titularidad de su marca por un plazo de 10 años.</h4>	
+											</li>
+									
+
+
+
+</div>
+</section>
+
+<section id="Nosotros">	<div class= "coso">
+	<div class ="wrapper">
+
+	
+	<h1 align="center">¿Porque elegirnos?</h1>
+	
+			<h3>
+			EXINN brinda el servicio más eficiente, los mejores precios y la seguridad de no pagar costos adicionales por la presentación inmediata de la solicitud en el INPI, ni gastas adicionales por emisión del título de concesión.<br>
+			Somos un equipo de trabajo que garantiza una atención personalizada y un seguimiento de cada registro, procurando el éxito hasta la finalización. Otorgamos además el servicio de vigilancia y mantenemos un contacto permanente en caso de necesitar resolver cualquier consulta.<br>
+
+		
+		<br></div>
+	</div>
+</section>
+
+<section id= "Legales">
+		
+	<div class = "wrapper">
+
+	<h3> Departamento de Legales:	</h3>	
+	<h4> EXINN brinda el servicio de registro de marcas garantizando que todo el proceso de la registración esta supervisado por profesionales en la materia; agentes de la propiedad Industrial y Abogados.
+Sabemos muy bien que el ámbito de comercialización de Productos y Servicios contiene áreas del derecho empresarial y comercial que en ocasiones presentas consultas jurídicas en distintos ámbitos, es por ello que en el Departamento de Legales contamos con abogados especializados en:
+</h4>
+
+<div class= "Act"> 
+								<div class= "Act1" > 
+									
+										<div class = "Act2"> 
+										<img src ="./Images/android.png" width= "70" / >
+									</div>
+									<h4 align="center">Derecho  de propiedad industrial e intelectual</h4>
+								
+								</div>		
+								<div class= "Act1" > 
+									
+										<div class = "Act2"> 
+									<img src ="./Images/web.png" width= "70"/ >
+									</div>
+									
+									<h4 align="center">Litigios, mediación y arbitraje</h4>
+								</div>
+									<div class= "Act1" > 
+							
+									<div class = "Act2"> 
+									<img src ="./Images/pc.png" width= "70" / >
+									</div>	
+									<h4 align="center"> Derecho Laboral</h4>
+									</div>
+								
+								
+							
+</div>	
+					<div class= "Act"> 
+													<div class= "Act1" > 
+														
+															<div class = "Act2"> 
+															<img src ="./Images/android.png" width= "70" / >
+														</div>
+														<h4 align="center">Derecho  de propiedad industrial e intelectual</h4>
+													
+													</div>		
+													<div class= "Act1" > 
+														
+															<div class = "Act2"> 
+														<img src ="./Images/web.png" width= "70"/ >
+														</div>
+														
+														<h4 align="center">Litigios, mediación y arbitraje</h4>
+													</div>
+														<div class= "Act1" > 
+												
+														<div class = "Act2"> 
+														<img src ="./Images/pc.png" width= "70" / >
+														</div>	
+														<h4 align="center"> Derecho Laboral</h4>
+														</div>
+												
+					</div>			
+					<div class= "Act"> 
+													<div class= "Act1" > 
+														
+															<div class = "Act2"> 
+															<img src ="./Images/android.png" width= "70" / >
+														</div>
+														<h4 align="center">Derecho  de propiedad industrial e intelectual</h4>
+													
+													</div>		
+													<div class= "Act1" > 
+														
+															<div class = "Act2"> 
+														<img src ="" width= "70"/ >
+														</div>
+														
+														<h4 align="center"></h4>
+													</div>
+														<div class= "Act1" > 
+												
+														<div class = "Act2"> 
+														<img src ="./Images/pc.png" width= "70" / >
+														</div>	
+														<h4 align="center"> Derecho Laboral</h4>
+														</div>
+												
+					</div>	
+
+					<h3 align="center" > Todos los profesionales dispuestos a resolver las consultas que puedan plantear sin ningún costo, otorgando beneficios y descuentos importantes a los clientes de registro de marcas.</h3>
+		</div>
+
+
+
+
+</section>
+<section class= "Precios"> 
+<div class=wrapper>
+
+<h2 style="text-align:center" id ="price" >Precios</h2>
+			<div class="columns">
+			  <ul class="price" >
+			    <li class="header2">Basic</li>
+			    <li class="grey"> $4,572 </li>
+			    <li>6 meses de servicio tecnico</li>
+			    <li>Home y 5 secciones</li>
+			    <li>Contrato de 1 Domain</li>
+			    <li>1GB Bandwidth</li>
+			    <li class="grey"><a href="#" class="button">Sign Up</a></li>
+			  </ul>
+			</div>
+
+			<div class="columns">
+			  <ul class="price">
+			    <li class="header2" style="background-color:white;">Pro</li>
+			    <li class="grey"> $ 24.99 / year</li>
+			    <li>25GB Storage</li>
+			    <li>25 Emails</li>
+			    <li>25 Domains</li>
+			    <li>2GB Bandwidth</li>
+			    <li class="grey"><a href="#" class="button">Sign Up</a></li>
+			  </ul>
+			</div>
+
+			<div class="columns">
+			  <ul class="price">
+			    <li class="header2">Premium</li>
+			    <li class="grey">$ 49.99 / year</li>
+			    <li>50GB Storage</li>
+			    <li>50 Emails</li>
+			    <li>50 Domains</li>
+			    <li>5GB Bandwidth</li>
+			    <li class="grey"><a href="#" class="button">Sign Up</a></li>
+			  </ul>
+			</div>
+</div>
+</section>
 			<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 	
 			<footer class= "footer">
 
@@ -241,7 +456,7 @@ en formato web y en soporte papel <br> todo, absolutamente sin ningún costo adi
 				<div class= "wrapper">
 
 						<div class= "contacto">
-						<a>Informacion de contacto: </a>
+						<a>Datos de contacto: </a>
 						
 						<a href="tel:+573024456678"><strong>Telefono: </strong><span>+573024456678</span></a>
 						<a href="mailto:contacto@contacto.com"><strong>E-mail: </strong><span>contacto@contacto.com</span></a>
@@ -249,21 +464,21 @@ en formato web y en soporte papel <br> todo, absolutamente sin ningún costo adi
 						<div class="col1"> <a>Social media: </a>
 							<div class="SocialMediaButtons">	
 															
-<a href="#0" class="c-link c-link--facebook c-tooltip" aria-label="Facebook">
+<a href="#0" class="c-link c-link--facebook c-tooltip" aria-label="">
     <svg class="c-icon"><use xlink:href="#icon--facebook"></use></svg>
 </a>
 
-<a href="#0" class="c-link c-link--twitter c-tooltip" aria-label="Twitter">
+<a href="#0" class="c-link c-link--twitter c-tooltip" >
     <svg class="c-icon"><use xlink:href="#icon--twitter"></use></svg>
 </a>
 
-<a href="#0" class="c-link c-link--google c-tooltip" aria-label="Google+">
+<a href="#0" class="c-link c-link--google c-tooltip" >
     <svg class="c-icon"><use xlink:href="#icon--google"></use></svg>
 </a>
 
 
 
-<a href="#0" class="c-link c-link--instagram c-tooltip" aria-label="Instagram">
+<a href="#0" class="c-link c-link--instagram c-tooltip" >
     <svg class="c-icon"><use xlink:href="#icon--instagram"></use></svg>
 </a>
 
@@ -306,6 +521,6 @@ en formato web y en soporte papel <br> todo, absolutamente sin ningún costo adi
 </div>
 
 </div>
-
+	</div>		
 	</body>
 </html>
