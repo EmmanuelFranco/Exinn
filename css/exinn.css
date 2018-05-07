@@ -1,7 +1,7 @@
 
 
 #container1 {
-    height: 85%;
+    height: 100%;
     width: 100%;
 
     overflow: hidden;
@@ -14,8 +14,8 @@
     left: 0px;
     right: -15px;
     overflow: auto;
-
-}
+    height: 100vh;
+} 
 
 p{
 	font-size: 24px;
@@ -29,21 +29,21 @@ p{
 }
 
  h2{
- 	font-family: "Segoe UI",Arial,sans-serif;font-size: 30px;color:white;
- 	
-	padding-top: 10px;
+ 	font-family: "Segoe UI",Arial,sans-serif;font-size: 30px;
+
 	font-weight: 200;
-	padding-left: 10px;
+
 }
 h1{
-	font-family: "Segoe UI",Arial,sans-serif;font-size: 40px;color:white;
+	font-family: "Segoe UI",Arial,sans-serif;font-size: 40px;
  
 	font-weight: 200;
 
 }
 
 a{
-	font-family: "Segoe UI",Arial,sans-serif;color:white;
+	font-family: "Segoe UI",Arial,sans-serif;
+  font-weight: 400;
 	color:white;	
 	font-size: 15px;
 }
@@ -56,48 +56,86 @@ li{
 
 
 h3{
-
-	font-family: "Segoe UI",Arial,sans-serif; font-size: 25px;color:white;
+margin-top:10px;
+	font-family: "Segoe UI",Arial,sans-serif; font-size: 25px;
 	font-weight: 200;
   margin-bottom: 0px;
+
 }
 
  h4{
 
-	font-family: "Segoe UI",Arial,sans-serif;color:white; font-size: 16px;
+	font-family: "Segoe UI",Arial,sans-serif; font-size: 16px;
 	font-weight: 200;
   	margin:0;
 	
 	 color:;
 }
 
+ h5{
+
+  font-family: "Segoe UI",Arial,sans-serif; font-size: 16px;
+  font-weight: 200;
+    margin:0;
+  
+   color:;
+}
+
 
 	.header {	
-	background: black;
-	height: 62px;
+	position: fixed;
+	background: transparent  ;  border-bottom: 1px rgba(0, 0, 0, 0.9);
+	height: 75px;
 	width: 100%;
+	animation-duration: 0.5s;
 	z-index: 999;
+	animation-fill-mode: forwards;
+   animation-name: color;
+
+ 	}
+
+	.small {
+     background:rgba(0, 0, 0, 0.9);
+      animation-duration: 1s;
+     animation-name: smaller;
 	}
 
-	.headerText a:hover{
-	color:white;
- 	transition: .7s;	
-	}
+	@keyframes smaller {
+
+    0%   { bottom:94%;}
+      
+   100% { bottom:96%;}
+    
+}
+  .menu a:hover{
+  color:grey;
+  transition: .7s;  
+
+  }
+
+  @keyframes color{
+     from {background-color: black;}
+    to {background-color: transparent;}
+  }
+
 
 	.logotipo{
 	display: inline-block;
-	margin:5px;
-	margin-left: 20px;
+  padding-left: 10px;
+  margin: 0;
+  padding-top: 10px;
+
 	}
 
-	.logotipo a{
-	margin-left: 20px;
+	.logotiposmall img{
+  padding-top: 32px;
+  height: 52px;
 	}
 	
-}
 .consulta h2{
-	background-color: red;
+color:white;
 }
+
 
 /* Standard syntax */
 @keyframes example {
@@ -105,9 +143,9 @@ h3{
     to {background-color: aquamarine;}
 }
 
- 
+
 body{
-	background: #1d1c1d ;
+	background:white ;
 	margin: 0;
   	height: 100vh;
 
@@ -121,21 +159,20 @@ body{
 }
 	
 .footer{	
-background: #0b0b0b ;
- position: fixed;
+background:  #1d1c1d ;
+
    left: 0;
    bottom: 0;
    width: 100%;
-  
+ 
    text-align: center;
 }
 
 .smallerfooter{
-height: 20%;
+
   animation-name: example;
 -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
 animation-fill-mode: forwards;
-
     animation-duration: 2s;
 }
 
@@ -144,18 +181,20 @@ animation-fill-mode: forwards;
 background-color: red;
 }
 @keyframes example {
-    0%   { top:80%;}
+    0%   { top:79%;}
     
-   100% { top:91%;}
+   100% { top:100%;}
    
 }
 
 .wrapper {	
+  padding-top: 50px;
 width: 90%;	
 max-width:1780px;
 margin: auto;
 overflow:hidden;
-margin-top: 20px;
+font-language-override: 
+
 
 }
 
@@ -191,18 +230,28 @@ transition: .7s;
 
 
 .menu {
-	display: inline-block;
-  padding-left: 85vh;
-	color:grey;
+  display: inline-block;
+  padding-left: 99vh;
+
+
+}
+.smallMenu
+{
+padding-top: 10px;
 
 }
 
 
+
 .menu li {
-	
 	display: inline-block;
-	padding: 10px 15px 7px 15px;
+  padding: 20px 15px 7px 15px;
 	
+}
+.menu ul{
+  display: inline-block;
+
+ 
 }
 
 
@@ -214,10 +263,10 @@ transition: .7s;
 
 background-color: #111011 ;
   width: 100%;
-  height: 68vh;
+  height: 100vh;
   overflow-x: hidden;
    overflow:hidden;
-margin-bottom: 55px;
+
 }
 
 .wrap {
@@ -237,14 +286,14 @@ margin-bottom: 55px;
 
 .slide1 {	
 	
-    background-image: url('../Images/background3.jpg'); 
+    background-image: url('../Images/background2.jpg'); 
    margin: 1px auto;
 
 
 
 }
 .slide2 {
- 	background-image: url('../Images/background2.jpg'); 
+ 	background-image: url('../Images/background3.jpg'); 
  	 margin: 1px auto;
 
 }
@@ -256,7 +305,7 @@ margin-bottom: 55px;
 
 #main {
     width:  100%;
-    height: 70vh;
+    height: 100vh;
     display: -webkit-flex; /* Safari */
     -webkit-align-items: center; /* Safari 7.0+ */
     display: flex;
@@ -278,29 +327,48 @@ margin-bottom: 55px;
 
 .portadaText{
 	color: white;
-  margin-left: 500px;
+  margin-left: 0;
+  display: inline-block;
 
 }
+
 
 .portadaText h3{
   width: 200px;
   padding-left: 5px;
 }
 .portadaText h1{
-  width: 200px;
+
 }
 
+.propaganda {
+  margin-left: 20px;
+  margin-right:  200px;
+    margin-bottom: 1px;
+}
 .propaganda h3{
-  margin-left: 30px;
-  padding: 20px 10px 10px 10px;
+margin-right: 10px;
+color:white;
+font-size:30px;
 
+}
+.propaganda li{
 
+font-size: 25px;
+
+}
+.propaganda h2{
+ margin-top:0;
+color:white;
+font-size: 25px;
 }
 
 .propaganda h4{
     padding: 0px 10px 20px 10px;
     margin-left: 30px;
   margin-bottom: 30px;
+
+  color:white;
 }
 
 .box{
@@ -324,13 +392,9 @@ margin-bottom: 55px;
 
 
 .titulo{
-	
 	font-size: 70px;
 	margin-top: 0;
 	margin-bottom: 0 ;
-
-	
-	
 }
 
 
@@ -550,7 +614,7 @@ padding-top: 0;
 		
 
 	.header{
-   	width:100%;/*The width is 100%, when the viewport is 800px or smaller*/
+   width:100%;/*The width is 100%, when the viewport is 800px or smaller*/
  	background: black;
 	padding-bottom: 320px;
 	opacity: 1;
@@ -1232,10 +1296,12 @@ FLoating labels
 }
 
 .js .floating-labels .cd-label.float {
-  /* move label out the input field */
+  /* move label out the  f
+inputield */
   font-size: 1.2rem;
   top: -16px;
   left: 0 !important;
+
 }
 
 .js .floating-labels .icon .cd-label {
@@ -1265,7 +1331,9 @@ FLoating labels
 
 
 #Registro {
-	margin-bottom: 100px;
+
+	margin-bottom: 550px;
+
 }
 
 #Legales{
@@ -1274,23 +1342,15 @@ FLoating labels
 }
 
 #Nosotros{
-	margin-bottom: 100px;
+	padding-bottom: 100px;
 	
+background-color: #f5f6f8;
 
-		background-image: url('../Images/background3.jpg'); 
-
-  
-	
-	box-shadow: 1px 1px 5px #000;
-	
-   	background-attachment: fixed;
-   	background-position: center;
-   	background-repeat: no-repeat;
-   	background-size: cover;
 }
 
 .coso{
 	background-color:rgba(0,0,0,0.5);
+  padding-bottom: 100px;
 }
 
 #Legales h3{
@@ -1345,3 +1405,90 @@ padding-top: 10px;
   outline: none;
   background: #2b3e51;
 }
+
+
+
+
+.wrapper2 {
+  position: absolute;
+ 	
+  left: 40%;
+  width: 300px;
+  height: 500px;
+  perspective: 900px;
+}
+
+#c5 {
+background-image: url('../Images/marca5.jpg'); 
+  left: 320%;
+  z-index: 0;
+ 
+  box-shadow: 0px 1px 10px black;
+}
+
+
+
+
+#c1 {
+  background-image: url('../Images/marca1.jpg'); 
+  box-shadow: 0px 1px 10px black;
+
+  left: 100%;
+  z-index: 0;
+}
+
+.container {
+  position: absolute;
+  top: 0%;
+  width: 110%;
+  height: 100%;
+  transition: .5s all ease;
+  transform: rotateX(60deg) scale(0.7);
+  perspective: 900px; 
+  box-shadow: 0px 1px 10px black;
+  
+background-image: url('../Images/marca3.jpg'); 
+}
+#c2 {
+background-image: url('../Images/marca2.jpg'); 
+  left: -100%;
+  z-index: 0;
+ 
+  box-shadow: 0px 1px 10px black;
+}
+
+#c3 {
+background-image: url('../Images/marca5.jpg'); 
+  left: -220%;
+  z-index: 0;
+ 
+  box-shadow: 0px 1px 10px black;
+}
+#c4 {
+  left: 220%;
+  z-index: 0;
+ background-image: url('../Images/marca.jpg');
+  box-shadow: 0px 1px 10px black;
+}
+
+.container:hover {
+  cursor: pointer;
+  transform: rotate(0deg) scale(1) translateY(10px);
+  transition: .5s all ease;
+  z-index: 400;
+}
+
+.image {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 45%;
+  
+}
+
+.info {
+  position: absolute;
+  top: 10%;
+}
+
