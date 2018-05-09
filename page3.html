@@ -1,177 +1,253 @@
-<!DOCTYPE html>
-<html>
-	<!-- Script para deslizar!-->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
-		type="text/javascript" charset="utf-8"></script>
-
-		<script type="text/javascript" >
-		$(function(){
-
-     $('a[href*=#]').click(function() {
-
-     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-         && location.hostname == this.hostname) {
-
-             var $target = $(this.hash);
-
-             $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-
-             if ($target.length) {
-
-                 var targetOffset = $target.offset().top;
-
-                 $('html,body').animate({scrollTop: targetOffset}, 1000);
-
-                 return false;
-            }
-       }
-   });
-});
 
 
-</script>
+                 <head>
+
+                        <link rel="stylesheet" id= "rpt-css" href="css/precio.css" type="text/css" media="all">
+
+                </head>
+
+
 <style>
+ive Pricing Table CSS (minified)
+ * Last updated: Nov 23, 2017 
+ */
 
-.animate-bottom{
-background-color: #F5F5F5;
-padding-bottom: 140px;}
-
-
-* {
-    box-sizing: border-box;
-}
-
-/* Style inputs */
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
-
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-/* Style the container/contact section */
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 10px;
-}
-
-/* Create two columns that float next to eachother */
-.column {
-    float: left;
-    width: 50%;
-    margin-top: 6px;
-    padding: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.menu{
-    padding-left: 15%;
-}
-
-.menu ul a{
-    color:transparent;
-}
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-    .column, input[type=submit] {
-        width: 100%;
-        margin-top: 0;
-    }
-}
-
-	.portada2{	
-    background: black;
-    
-    
-	}
-
-    .form {
-        background-color: #45a049;
-        margin:0;
-        padding:0;
-    }
-.buscadores{
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-  float:left;
-  
-  margin-left: auto;
-  margin-right: auto;
-
-}
+.rpt_2_plans .rpt_plan{width:49%;float:left}.rpt_2_plans .rpt_plan_0{margin-right:2%}.rpt_3_plans .rpt_plan{width:32%;float:left}.rpt_3_plans .rpt_plan_0{margin-right:1.9%}.rpt_3_plans .rpt_plan_2{margin-left:1.9%}.rpt_4_plans .rpt_plan{width:24.5%;float:left}.rpt_4_plans .rpt_plan_0{margin-right:.66%}.rpt_4_plans .rpt_plan_2{margin-left:.66%}.rpt_4_plans .rpt_plan_3{margin-left:.66%}.rpt_5_plans .rpt_plan{width:19.5%;float:left}.rpt_5_plans .rpt_plan_0{margin-right:.62%}.rpt_5_plans .rpt_plan_2{margin-left:.62%}.rpt_5_plans .rpt_plan_3{margin-left:.62%}.rpt_5_plans .rpt_plan_4{margin-left:.62%}.rpt_style_basic .rpt_plan .rpt_title img{margin-right:10px;position:relative;vertical-align:middle}.rpt_style_basic .rpt_plan .rpt_title{border-bottom:#111 solid 1px;background:#222;padding:14px 18px;font-size:26px;color:white;line-height:35px;border-top-left-radius:8px;border-top-right-radius:8px}.rpt_style_basic .rpt_sm_title .rpt_plan .rpt_title{font-size:20px}.rpt_style_basic .rpt_xsm_title .rpt_plan .rpt_title{font-size:17px}.rpt_4_plans .rpt_plan .rpt_title{font-size:17px}.rpt_4_plans .rpt_sm_title .rpt_plan .rpt_title{font-size:15px}.rpt_4_plans .rpt_xsm_title .rpt_plan .rpt_title{font-size:13px}.rpt_5_plans .rpt_plan .rpt_title{font-size:15px}.rpt_5_plans .rpt_sm_title .rpt_plan .rpt_title{font-size:13px}.rpt_5_plans .rpt_xsm_title .rpt_plan .rpt_title{font-size:12px}.rpt_style_basic .rpt_plan .rpt_head .rpt_price .rpt_currency{position:relative;top:-44px;left:-10px;font-size:35px;line-height:0}.rpt_4_plans .rpt_plan .rpt_head .rpt_price .rpt_currency{top:-36px}.rpt_5_plans .rpt_plan .rpt_head .rpt_price .rpt_currency{top:-26px}.rpt_style_basic .rpt_sm_price .rpt_plan .rpt_head .rpt_price .rpt_currency{font-size:30px;top:-44px;left:-4px}.rpt_style_basic .rpt_xsm_price .rpt_plan .rpt_head .rpt_price .rpt_currency{font-size:25px;top:-30px;left:-4px}.rpt_style_basic .rpt_xxsm_price .rpt_plan .rpt_head .rpt_price .rpt_currency{font-size:21px;top:-14px;left:-4px}.rpt_style_basic .rpt_plan .rpt_head{border-top:#222 solid 2px;background:#333;background:-moz-linear-gradient(45deg,#333333 0%,#1c1c1c 100%);background:-webkit-gradient(linear,left bottom,right top,color-stop(0%,#333333),color-stop(100%,#1c1c1c));background:-webkit-linear-gradient(45deg,#333333 0%,#1c1c1c 100%);background:-o-linear-gradient(45deg,#333333 0%,#1c1c1c 100%);background:-ms-linear-gradient(45deg,#333333 0%,#1c1c1c 100%);background:linear-gradient(45deg,#333333 0%,#1c1c1c 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333',endColorstr='#1c1c1c',GradientType=1)}.rpt_style_basic .rpt_plan .rpt_head .rpt_price{padding:6px 10px;font-size:74px;line-height:100px;font-weight:300;text-align:center;color:white;text-shadow:1px 2px 7px rgba(0,0,0,.6)}.rpt_style_basic .rpt_sm_price .rpt_plan .rpt_head .rpt_price{font-size:62px}.rpt_style_basic .rpt_xsm_price .rpt_plan .rpt_head .rpt_price{font-size:56px}.rpt_style_basic .rpt_xxsm_price .rpt_plan .rpt_head .rpt_price{font-size:38px}.rpt_4_plans .rpt_plan .rpt_head .rpt_price{font-size:69px;line-height:80px}.rpt_4_plans .rpt_sm_price .rpt_plan .rpt_head .rpt_price{font-size:53px;line-height:65px}.rpt_4_plans .rpt_xsm_price .rpt_plan .rpt_head .rpt_price{font-size:47px;line-height:64px}.rpt_4_plans .rpt_xxsm_price .rpt_plan .rpt_head .rpt_price{font-size:31px;line-height:60px}.rpt_5_plans .rpt_plan .rpt_head .rpt_price{font-size:59px;line-height:80px}.rpt_5_plans .rpt_sm_price .rpt_plan .rpt_head .rpt_price{font-size:44px;line-height:60px}.rpt_5_plans .rpt_xsm_price .rpt_plan .rpt_head .rpt_price{font-size:37px;line-height:53px}.rpt_5_plans .rpt_xxsm_price .rpt_plan .rpt_head .rpt_price{font-size:24px;line-height:50px}.rpt_style_basic .rpt_plan .rpt_head .rpt_recurrence{font-size:13px;font-weight:300;line-height:18px;padding:20px 40px 10px;color:lightgrey;text-align:center}.rpt_style_basic .rpt_sm_recurrence .rpt_plan .rpt_head .rpt_recurrence{font-size:11px;padding:20px 40px 4px}.rpt_style_basic .rpt_plan .rpt_head .rpt_subtitle{font-size:16px;line-height:20px;font-weight:300;text-align:center;padding:10px 30px 20px}.rpt_style_basic .rpt_sm_subtitle .rpt_plan .rpt_head .rpt_subtitle{font-size:14px}.rpt_style_basic .rpt_xsm_subtitle .rpt_plan .rpt_head .rpt_subtitle{font-size:12px}.rpt_4_plans .rpt_plan .rpt_head .rpt_subtitle{font-size:16px;line-height:18px;padding:10px 10px 20px}.rpt_4_plans .rpt_sm_subtitle .rpt_plan .rpt_head .rpt_subtitle{font-size:14px;line-height:17px}.rpt_4_plans .rpt_xsm_subtitle .rpt_plan .rpt_head .rpt_subtitle{font-size:13px;line-height:16px}.rpt_5_plans .rpt_plan .rpt_head .rpt_subtitle{font-size:15px;line-height:18px;padding:10px 10px 20px}.rpt_5_plans .rpt_sm_subtitle .rpt_plan .rpt_head .rpt_subtitle{font-size:13px;line-height:17px}.rpt_5_plans .rpt_xsm_subtitle .rpt_plan .rpt_head .rpt_subtitle{font-size:12px;line-height:16px}.rpt_style_basic .rpt_plan .rpt_head .rpt_description{font-size:14px;line-height:20px;padding:0 20px 30px;font-weight:300;text-align:center;color:grey}.rpt_style_basic .rpt_sm_description .rpt_plan .rpt_head .rpt_description{font-size:12px}.rpt_4_plans .rpt_plan .rpt_head .rpt_description{font-size:13px;line-height:18px}.rpt_4_plans .rpt_sm_description .rpt_plan .rpt_head .rpt_description{font-size:12px;line-height:17px}.rpt_5_plans .rpt_plan .rpt_head .rpt_description{font-size:12px;line-height:18px}.rpt_5_plans .rpt_sm_description .rpt_plan .rpt_head .rpt_description{font-size:11px;line-height:17px}.rpt_style_basic .rpt_plan .rpt_features{padding:20px;background:whitesmoke;text-align:center}.rpt_style_basic .rpt_plan .rpt_features .rpt_feature{font-size:16px;padding:6px 16px;border-bottom:1px dotted lightgrey}.rpt_style_basic .rpt_plan .rpt_features .rpt_feature:last-child{border-bottom:none}.rpt_style_basic .rpt_sm_features .rpt_plan .rpt_features .rpt_feature{font-size:14px}.rpt_4_plans .rpt_plan .rpt_features .rpt_feature{padding:6px 10px;font-size:14px}.rpt_4_plans .rpt_sm_features .rpt_plan .rpt_features .rpt_feature{font-size:12px}.rpt_5_plans .rpt_plan .rpt_features .rpt_feature{padding:6px 10px;font-size:13px}.rpt_5_plans .rpt_sm_features .rpt_plan .rpt_features .rpt_feature{font-size:11px}.rpt_style_basic .rpt_plan .rpt_foot{display:block;padding:10px 30px;border-top:whitesmoke solid 2px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;text-align:center;color:white;font-size:24px;text-decoration:none;font-weight:300;transition:All 500ms ease;-webkit-transition:All 500ms ease;-moz-transition:All 500ms ease;-o-transition:All 500ms ease}.rpt_style_basic .rpt_plan .rpt_foot:hover{opacity:.8}.rpt_style_basic .rpt_sm_button .rpt_plan .rpt_foot{font-size:19px}.rpt_4_plans .rpt_plan .rpt_foot{padding:4px 20px;font-size:19px}.rpt_4_plans .rpt_sm_button .rpt_plan .rpt_foot{padding:4px 20px;font-size:17px}.rpt_5_plans .rpt_plan .rpt_foot{padding:4px 20px;font-size:17px}.rpt_5_plans .rpt_sm_button .rpt_plan .rpt_foot{font-size:16px}.rpt_style_basic .rpt_recommended_plan{position:relative;top:-10px}.rpt_style_basic .rpt_recommended_plan .rpt_title{background:#111}.rpt_style_basic .rpt_recommended_plan .rpt_head{background:#1e1e1e;background:-moz-linear-gradient(45deg,#1e1e1e 0%,#191919 100%);background:-webkit-gradient(linear,left bottom,right top,color-stop(0%,#1e1e1e),color-stop(100%,#191919));background:-webkit-linear-gradient(45deg,#1e1e1e 0%,#191919 100%);background:-o-linear-gradient(45deg,#1e1e1e 0%,#191919 100%);background:-ms-linear-gradient(45deg,#1e1e1e 0%,#191919 100%);background:linear-gradient(45deg,#1e1e1e 0%,#191919 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e1e1e',endColorstr='#191919',GradientType=1)}.rpt_style_basic .rpt_recommended_plan .rpt_foot{font-size:30px;padding:16px 0}.rpt_recommended_plan img.rpt_recommended{position:absolute!important;right:10px!important}.rpt_style_basic .rpt_recommended_plan .rpt_head .rpt_price{font-size:98px}.rpt_4_plans .rpt_recommended_plan .rpt_head .rpt_price{font-size:74px}.rpt_5_plans .rpt_recommended_plan .rpt_head .rpt_price{font-size:67px}.rpt_style_basic .rpt_sm_price .rpt_recommended_plan .rpt_head .rpt_price{font-size:83px}.rpt_4_plans .rpt_sm_price .rpt_recommended_plan .rpt_head .rpt_price{font-size:60px}.rpt_5_plans .rpt_sm_price .rpt_recommended_plan .rpt_head .rpt_price{font-size:54px}.rpt_style_basic .rpt_xsm_price .rpt_recommended_plan .rpt_head .rpt_price{font-size:55px}.rpt_4_plans .rpt_xsm_price .rpt_recommended_plan .rpt_head .rpt_price{font-size:49px}.rpt_5_plans .rpt_xsm_price .rpt_recommended_plan .rpt_head .rpt_price{font-size:41px}.rpt_style_basic .rpt_xxsm_price .rpt_recommended_plan .rpt_head .rpt_price{font-size:42px}.rpt_4_plans .rpt_xxsm_price .rpt_recommended_plan .rpt_head .rpt_price{font-size:34px}.rpt_5_plans .rpt_xxsm_price .rpt_recommended_plan .rpt_head .rpt_price{font-size:26px}.rpt_style_basic .rpt_sm_button .rpt_recommended_plan .rpt_foot{font-size:25px}.rpt_4_plans .rpt_recommended_plan .rpt_foot{font-size:22px;font-weight:300;padding:10px 0}.rpt_4_plans .rpt_sm_button .rpt_recommended_plan .rpt_foot{font-size:19px;padding:10px 0}.rpt_5_plans .rpt_recommended_plan .rpt_foot{font-size:20px;font-weight:300;padding:10px 0}.rpt_5_plans .rpt_sm_button .rpt_recommended_plan .rpt_foot{font-size:18px;padding:10px 0}.rpt_style_basic .rpt_plan .rpt_custom_btn{border-bottom-left-radius:5px;border-bottom-right-radius:5px;text-align:center;padding:16px 20px}.entry-content .rpt_plan a{border-bottom:none}.rpt_style_basic .rpt_plan a{border-bottom:none}.rpt_style_basic .rpt_plan .rpt_icon{max-width:30px;max-height:30px}.rpt_style_basic .rpt_plan img{display:inline;margin:0 10px 0 0;padding:0;-webkit-box-shadow:0 0 0 0 rgba(0,0,0,0);-moz-box-shadow:0 0 0 0 rgba(0,0,0,0);box-shadow:0 0 0 0 rgba(0,0,0,0);border:none}@media only screen and (max-width:640px){.rpt_plans .rpt_plan{width:96%}.rpt_plans .rpt_plan{margin:10px 2% 20px!important}.rpt_style_basic .rpt_recommended_plan .rpt_foot{font-size:30px;font-weight:300;padding:20px 0}.rpt_style_basic .rpt_plan .rpt_foot{padding:10px 40px;text-align:center;font-size:20px!important}.rpt_style_basic .rpt_plan .rpt_head .rpt_price{font-size:74px!important;line-height:100px!important}.rpt_style_basic .rpt_plan .rpt_title{position:relative;font-size:26px!important;line-height:35px}.rpt_style_basic .rpt_plan .rpt_head .rpt_subtitle{font-size:17px!important;line-height:28px;padding:10px 40px 20px}.rpt_style_basic .rpt_plan .rpt_head .rpt_description{font-size:15px!important;line-height:26px!important;padding:0 40px 30px}.rpt_style_basic .rpt_plan .rpt_features .rpt_feature{padding:6px 16px;font-size:14px!important}.rpt_plan .rpt_head .rpt_price .rpt_currency{top:-36px!important;left:-10px!important;font-size:35px!important}}#rpt_pricr .rpt_plan_ori .rpt_title,#rpt_pricr .rpt_plan_ori .rpt_head .rpt_recurrence,#rpt_pricr .rpt_plan_ori .rpt_head .rpt_price,#rpt_pricr .rpt_plan_ori .rpt_head .rpt_price .rpt_currency,#rpt_pricr .rpt_plan_ori .rpt_head .rpt_subtitle,#rpt_pricr .rpt_plan_ori .rpt_head .rpt_description,#rpt_pricr .rpt_plan_ori .rpt_features .rpt_feature,#rpt_pricr .rpt_plan_ori .rpt_features .rpt_feature a,#rpt_pricr .rpt_plan_ori .rpt_foot{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif!important;font-weight:300!important}
 </style>
-	<head>
-		<title>Open Design</title>
-		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="css/index.css"/>
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Heebo:800" rel="stylesheet">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<style type="text/css" media="screen">
-		A:link {color: grey; text-decoration: none }
-		A:hover {color: white; text-decoration: none }
-		A:visited {color: grey; text-decoration: none }
-		#link { color: grey; text-decoration: none }
-		</style>
-
-	</head>
-	<body  onload="myFunction()" style="margin:0;"> 	
-
-		<section id= "portada" class= "portada2"> <!--Portada-->
-
-		<div class="header2" id=myHeader> <!--Header-->
-	
-					<div class="headerText"> <!--Header-->
-
-								<figure class= "logotipo"> <!-- Logotipo -->
-                
-               
-
-
-								<a href = index.html>
-								
-								<a href  = index.html >  Open Design </a>
-
-								</figure>
-					
-   
-<form action="http://18.218.177.65/advancedSearch.php" method="get" >
-    <div class= "Buscadores">
-                <input type="text" id="buscar" name="buscar" placeholder="Buscar">
-
-                <input type="text" id="campo" name="campo" placeholder="Campo que desea buscar">
-               </div>
-    <button>Enviar</button>
  
-</form>
 
-  </div>
-</div>
+                                          
 
-	</body>
-</html>
+    <div class="fusion-fullwidth fullwidth-box nonhundred-percent-fullwidth non-hundred-percent-height-scrolling"
 
-		
+        style="background-color: #ffffff;background-position: center center;background-repeat: no-repeat;padding-top:50px;padding-right:30px;padding-bottom:80px;padding-left:30px;margin-top: 60px;">
 
+              <div class="fusion-layout-column fusion_builder_column fusion_builder_column_1_1  fusion-one-full fusion-column-first fusion-column-last 1_1"
+
+                style="margin-top:50px;margin-bottom:20px;">
+
+                <div class="fusion-column-wrapper" style="padding: 0px 0px 0px 0px;background-position:left top;background-repeat:no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;"
+
+                    data-bg-url="">
+
+                    <div class="fusion-title title fusion-sep-none fusion-title-size-one fusion-border-below-title" style="margin-top:0px;margin-bottom:50px;">
+
+                        <h1 class="title-heading-left"></h1>
+
+                    <h2 style="text-align: center;">¿Qué te ofrecemos?</h2>
+
+                    </div>
+
+                    <div id="rpt_pricr" class="rpt_plans rpt_4_plans rpt_style_basic" text->
+
+                        <div class="">
+
+                            <div class="rpt_plan   rpt_plan_0  ">
+
+                                <div style="text-align:center;" class="rpt_title rpt_title_0"><h3>Basico</h3></div>
+
+                                <div class="rpt_head rpt_head_0">
+
+                                    <div class="rpt_price rpt_price_0">$ 3.000</div>
+
+                                    <div class="rpt_description rpt_description_0"></div>
+
+                                </div>
+
+                                <div class="rpt_features rpt_features_0">
+
+                                    <div style="color:black;" class="rpt_feature rpt_feature_0-0">estudio de viabilidad de la marca
+
+                                    </div>
+
+                                    <div style="color:black;" class="rpt_feature rpt_feature_0-1">Presentación de la solicitud
+
+                                    </div>
+
+                                    <div style="color:black;" class="rpt_feature rpt_feature_0-2">Aranceles y tasas del INPI
+
+                                    </div>
+
+                                    <div style="color:black;" class="rpt_feature rpt_feature_0-3">Asesoramiento personalizado de las cuestiones legales y administrativas, resueltas por los profesionales en la materia
+
+                                    </div>
+
+                                    <div style="color:black;" class="rpt_feature rpt_feature_0-4">Seguimiento permanente de todo el trámite
+
+                                    </div>
+
+                                    <div style="color:black;" class="rpt_feature rpt_feature_0-5">Retiro y entrega del titulo de concesión
+
+                                    </div>
+
+                                <a target="_self" href="/#contacto" style="background:#426c9f" class="rpt_foot rpt_foot_0">QUIERO</a>
+
+                            </div>
+
+                </div>
+
+                            <div class="rpt_plan   rpt_plan_1  " >
+
+                                <div style="text-align:center;" class="rpt_title rpt_title_2"><h3>Plus</h3></div>
+
+                                <div class="rpt_head rpt_head_1">
+
+                                    <div class="rpt_price rpt_price_1">$ 3.500</div>
+
+                                    <div class="rpt_description rpt_description_1">*por 5 años</div>
+
+                                </div>
+
+                                <div class="rpt_features rpt_features_2">
+
+                                <div style="color:black;" class="rpt_feature rpt_feature_0-0">estudio de viabilidad de la marca
+
+                                </div>
+
+                                <div style="color:black;" class="rpt_feature rpt_feature_0-1">Presentación de la solicitud
+
+                                </div>
+
+                                <div style="color:black;" class="rpt_feature rpt_feature_0-2">Aranceles y tasas del INPI
+
+                                </div>
+
+                                <div style="color:black;" class="rpt_feature rpt_feature_0-3">Asesoramiento personalizado de las cuestiones legales y administrativas, resueltas por los profesionales en la materia
+
+                                </div>
+
+                                <div style="color:black;" class="rpt_feature rpt_feature_0-4">Seguimiento permanente de todo el trámite.
+
+                                </div>
+
+                                <div style="color:black;" class="rpt_feature rpt_feature_0-5">Retiro y entrega del titulo de concesión
+
+                                </div>
+
+                                <div style="color:black;" class="rpt_feature rpt_feature_0-6">*Custodia y vigilancia de la marca
+
+                                </div>
+
+                                <div style="color:black;" class="rpt_feature rpt_feature_0-7"> Se asegura la originalidad de su marca
+
+                                    </div>
+
+                                <a target="_self" href="/#contacto" style="background:#426c9f" class="rpt_foot rpt_foot_2">QUIERO</a>
+
+                            </div>
+
+                    </div>
+
+                            <div class="rpt_plan   rpt_plan_2  " >
+
+                                <div style="text-align:center;" class="rpt_title rpt_title_3"><h3>Premium</h3></div>
+
+                                <div class="rpt_head rpt_head_2">
+
+                                    <div class="rpt_price rpt_price_2">$ 4.000</div>
+
+                                    <div class="rpt_description rpt_description_2">*Por 10 años</div>
+
+                                </div>
+
+                                <div class="rpt_features rpt_features_3">
+
+                                        <div style="color:black;" class="rpt_feature rpt_feature_0-0">estudio de viabilidad de la marca
+
+                                        </div>
+
+                                        <div style="color:black;" class="rpt_feature rpt_feature_0-1">Presentación de la solicitud
+
+                                        </div>
+
+                                        <div style="color:black;" class="rpt_feature rpt_feature_0-2">Aranceles y tasas del INPI
+
+                                        </div>
+
+                                        <div style="color:black;" class="rpt_feature rpt_feature_0-3">Asesoramiento personalizado de las cuestiones legales y administrativas, resueltas por los profesionales en la materia
+
+                                        </div>
+
+                                        <div style="color:black;" class="rpt_feature rpt_feature_0-4">Seguimiento permanente de todo el trámite
+
+                                        </div>
+
+                                        <div style="color:black;" class="rpt_feature rpt_feature_0-5">Retiro y entrega del titulo de concesión
+
+                                        </div>
+
+                                        <div style="color:black;" class="rpt_feature rpt_feature_0-6">*Custodia y vigilancia de la marca
+
+                                        </div>
+
+                                        <div style="color:black;" class="rpt_feature rpt_feature_0-7">Se asegura la originalidad de su marca
+
+                                        </div>
+
+                                        <div style="color:black;" class="rpt_feature rpt_feature_0-8">Notificación de la renovación en el tiempo correcto, sin poner en riesgo su titularidad
+
+                                          </div>
+
+                                <a target="_self" href="/#contacto" style="background:#426c9f" class="rpt_foot rpt_foot_3">QUIERO</a>
+
+                                </div>
+
+                        </div>
+
+                    
+
+                    </div>
+
+                </div>
+
+            
+
+                    <div style="clear:both;"></div>
+
+                    <div class="fusion-clearfix"></div>
+
+<h3 style="text-align: center;">
+
+    *REGISTRO DE MARCA INTERNACIONAL: El costo varía dependiendo del País en que se quiera obtener la registración, brindamos
+
+    todo el asesoramiento e información que necesite, como así también, contamos con traductores públicos habilitados para
+
+    realizar el trámite junto con los abogados y Agentes.</h3>
+
+                </div>
+
+               <h3>Los precios expresados corresponde a la registración de la marca en la primera clase, en caso de solicitar la registración
+
+            en diferentes clases se abonara las siguientes un 15% menos.</h3>  
+
+            </div>
+
+        </div>
+
+    </div>
+
+                        
+
+                    </section>
+
+
+
+                </div>
+
+                
+
+
+
+        </div>
+
+
+
+
+
+     
+
+    </body>
+
+
+
+    </html>

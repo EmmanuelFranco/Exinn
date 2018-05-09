@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
 	<!-- Script para deslizar!-->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
 		type="text/javascript" charset="utf-8"></script>
@@ -42,7 +42,7 @@ setInterval(function() {
     .fadeIn(250)
     .end()
     .appendTo('#slider');
-},  1500);
+},  15000);
 </script>
 <script type="text/javascript">
 // Este script es para achicar el header
@@ -104,7 +104,8 @@ app.controller('myCtrl', function($scope) {
 
 	</head>
 	<body id= "body"> 	
-		
+	
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>	
 <div id="container1">
     <div id="container2">
 
@@ -131,18 +132,18 @@ app.controller('myCtrl', function($scope) {
 												<a href = #Registro> Registro de marca</a>
 											</li>
 											<li>
-												<a href = page2.html>  Nosotros </a>
+												<a href = #Nosotros>  Nosotros </a>
 											</li>
 											<li>
 												<a href = #Legales>  Departamento de Legales </a>
 											</li>
 											
 											<li>
-												<a href = page2.html>  Contacto </a>
+												<a href = #footer>  Contacto </a>
 											</li>
 
 											<li>
-											<a href = #tecnologias> Precios </a>
+											<a href = #Precios> Precios </a>
 											</li>
 										</ul>
 									</nav>
@@ -182,13 +183,13 @@ por $ 3000.</h3>  </ul></div>
 				  </div> 
 </script>
 		    <div class="icon">
-		    	<label class="cd-label" for="cd-email" ng-model="email">Correo</label>
+		    	<label class="cd-label" for="cd-email" ng-model="email" >Correo</label>
 				<input class="email error" type="email" name="cd-email" id="cd-email" ng-model="email"required>
 		    </div>
 		
 		    <div class="icon">
-		    	<label class="cd-label" for="cd-company">Telefono</label>
-				<input class="company" type="text" name="cd-company" id="cd-company">
+		    	<label class="cd-label" for="cd-company" " ng-model="Telefono" >Telefono</label>
+				<input class="company" type="text" name="cd-company" id="cd-company" ng-model="Telefono">
 		    </div> 
 
 			<div>
@@ -246,8 +247,8 @@ en formato web y en soporte papel</li></h2><br><h3> todo sin ningún costo adici
 		    </div>
 		
 		    <div class="icon">
-		    	<label class="cd-label" for="cd-company">Telefono</label>
-				<input class="company" type="text" name="cd-company" id="cd-company">
+		    	<label class="cd-label" for="cd-company" ng-model="Telefono">Telefono</label>
+				<input class="company" type="text" name="cd-company" id="cd-company" ng-model="Telefono">
 		    </div> 
 
 			<div>
@@ -427,7 +428,8 @@ Sabemos muy bien que el ámbito de comercialización de Productos y Servicios co
 														</div>
 												
 					</div>			
-					<div class= "Act"> 
+				
+				<div class= "Act"> 
 													<div class= "Act1" > 
 														
 															<div class = "Act2"> 
@@ -439,10 +441,10 @@ Sabemos muy bien que el ámbito de comercialización de Productos y Servicios co
 													<div class= "Act1" > 
 														
 															<div class = "Act2"> 
-														<img src ="" width= "70"/ >
+														<img src ="./Images/web.png" width= "70"/ >
 														</div>
 														
-														<h4 align="center"></h4>
+														<h4 align="center">Litigios, mediación y arbitraje</h4>
 													</div>
 														<div class= "Act1" > 
 												
@@ -452,7 +454,7 @@ Sabemos muy bien que el ámbito de comercialización de Productos y Servicios co
 														<h4 align="center"> Derecho Laboral</h4>
 														</div>
 												
-					</div>	
+					</div>			
 
 		</div>
 
@@ -460,47 +462,68 @@ Sabemos muy bien que el ámbito de comercialización de Productos y Servicios co
 					<h3 align="center" > Todos los profesionales dispuestos a resolver las consultas que puedan plantear sin ningún costo, otorgando beneficios y descuentos importantes a los clientes de registro de marcas.</h3></div>
 
 </section>
-<section class= "Precios"> 
+<section class= "Precios" id= "Precios"> 
 <div class=wrapper>
 
 <h2 style="text-align:center" id ="price" >Precios</h3>
-			<div class="columns">
+				<div class="columns">
 			  <ul class="price" >
-			    <li class="header2">Basic</li>
-			    <li class="grey"> $4,572 </li>
-			    <li>6 meses de servicio tecnico</li>
-			    <li>Home y 5 secciones</li>
-			    <li>Contrato de 1 Domain</li>
-			    <li>1GB Bandwidth</li>
+			    <li class="header2">Basico</li>
+			    <li class="grey"> $ 3.000</li>
+			    <li>Estudio de viabilidad de la marca</li>
+			    <li>Aranceles y tasas del INPI</li>
+			    <li>Asesoramiento personalizado <br>resueltas por los
+					profesionales en la materia.</li>
+			    <li>Seguimiento del tramite</li>
+			    <li>Retiro y entrega del titulo de concesión</li>  
+			    <li></li>
 			    <li class="grey"><a href="#" class="button">Sign Up</a></li>
 			  </ul>
 			</div>
 
 			<div class="columns">
-			  <ul class="price">
-			    <li class="header2" style="background-color:white;">Pro</li>
-			    <li class="grey"> $ 24.99 / year</li>
-			    <li>25GB Storage</li>
-			    <li>25 Emails</li>
-			    <li>25 Domains</li>
-			    <li>2GB Bandwidth</li>
+			 <ul class="price" >
+			    <li class="header2">Plus</li>
+			    <li class="grey"> $ 3.500</li>
+			    <li>Estudio de viabilidad de la marca</li>
+			    <li>Aranceles y tasas del INPI</li>
+			    <li>Asesoramiento personalizado </li>
+			    <li>Seguimiento del tramite</li>
+			    <li>Retiro y entrega del titulo de concesión</li>
+			    <li>º5 años de custodia y vigilancia
+					de la marca </li>
+		
 			    <li class="grey"><a href="#" class="button">Sign Up</a></li>
-			  </ul>
+			  </ul>	
 			</div>
+
 
 			<div class="columns">
 			  <ul class="price">
 			    <li class="header2">Premium</li>
-			    <li class="grey">$ 49.99 / year</li>
-			    <li>50GB Storage</li>
-			    <li>50 Emails</li>
-			    <li>50 Domains</li>
-			    <li>5GB Bandwidth</li>
+			    <li class="grey">$ 4000</li>
+			    <li>Estudio de viabilidad de la marca</li>
+			    <li>Aranceles y tasas del INPI</li>
+			    <li>Asesoramiento personalizado </li>
+			    <li>Seguimiento del tramite</li>
+			    <li>Retiro y entrega del titulo de concesión</li>			    
+			    <li>Custodia por el plazo
+					de 10 años,</li>
 			    <li class="grey"><a href="#" class="button">Sign Up</a></li>
 			  </ul>
 			</div>
 </div> 
+
+
 </section>
+<div class= "price"> 
+<h4>* y brindando la posibilidad de oponerse a los mismos para garantizar la
+originalidad de su marca registrada.</h4>
+<h4>* palertando sobre posibles registros similares que
+					puedan aparecer y brindando soporte para garantizar la originalidaid de su marca</h4>
+<h4>*que es el periodo de vigencia de su concesión y se lo alertara en tiempo para
+iniciar la renovación de su registro por otro periodo igual.</h4>
+</div>
 			<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 	
 			<footer class= "footer">
 
