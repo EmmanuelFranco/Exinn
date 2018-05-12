@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <script type="text/javascript">
+      	function ajaxObject(){
+      		var xmlhttp = false;
+      		try {
+      			xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+      		} catch (e) {
+
+      			try {
+      				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      			} catch (E) {
+      				xmlhttp = false; }
+      		}
+
+      		if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+      		  xmlhttp = new XMLHttpRequest();
+      		}
+      		return xmlhttp;
+      	}
+
+        function sendData(){
+            //Recogemos los valores introducimos en los campos de texto
+        		name = document.contact.name.value;
+        		email = document.contact.email.value;
+            message = document.contact.message.value;
+
+        		//instanciamos el objetoAjax
+        		ajax = ajaxObject();
+
+        		//Abrimos una conexión AJAX pasando como parámetros el método de envío, y el archivo que realizará las operaciones deseadas
+        		ajax.open("POST", "http://exinn.com.ar/emailer.php", true);
+
+        		//cuando el objeto XMLHttpRequest cambia de estado, la función se inicia
+        		ajax.onreadystatechange = function() {
+                     //Cuando se completa la petición, mostrará los resultados
+        			if (ajax.readyState == 4){
+
+        				//El método responseText() contiene el texto de nuestro 'consultar.php'. Por ejemplo, cualquier texto que mostremos por un 'echo'
+        				alert(ajax.responseText);
+              }
+            }
+
+        		//Llamamos al método setRequestHeader indicando que los datos a enviarse están codificados como un formulario.
+        		ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+
+        		//enviamos las variables a 'consulta.php'
+        		ajax.send("&name=" + name + "&email=" + email + "&message=" + message)
+        }
+    </script>
+  </head>
+  <body>
+    <form name="contact" method="post" action="" onSubmit="sendData(); return false">
+      <fieldset>
+        <legend>Ingrese su consulta</legend>
+        <p>
+          <label>Nombre:
+            <input type="text" name="name" id="name" />
+          </label>
+        </p>
+        <p>
+          <label>Email:
+            <input type="text" name="email" id="email"/>
+          </label>
+        </p>
+        <p>
+          <label>Mensaje:
+            <textarea name="message" id="message" cols="30" rows="5"></textarea>
+          </label>
+        </p>
+        <p>
+          <input type="submit" value="Enviar"/>
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>
