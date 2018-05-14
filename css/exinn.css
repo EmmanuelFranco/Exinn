@@ -690,6 +690,13 @@ display:none;
 
 
 
+@media screen and (max-width: 800px) {
+.container{
+  display: none;
+}
+
+}
+
 
 
 .c-icon {
