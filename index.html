@@ -43,7 +43,7 @@ setInterval(function() {
     .fadeIn(250)
     .end()
     .appendTo('#slider');
-},  15000);
+},  1500);
 </script>
 <script type="text/javascript">
 // Este script es para achicar el header
@@ -81,6 +81,7 @@ app.controller('myCtrl', function($scope) {
     $scope.Valores= "";
 });
 </script>
+        	
 
 	<head>
 		<title>Exinn</title>
@@ -103,107 +104,62 @@ app.controller('myCtrl', function($scope) {
 		#link { color: white; text-decoration: none }
 
 		</style>
+   		
+
  <script type="text/javascript">
-
       	function ajaxObject(){
-
       		var xmlhttp = false;
-
       		try {
-
       			xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-
       		} catch (e) {
 
-
-
       			try {
-
       				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-
       			} catch (E) {
-
       				xmlhttp = false; }
-
       		}
-
-
 
       		if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
-
       		  xmlhttp = new XMLHttpRequest();
-
       		}
-
       		return xmlhttp;
-
       	}
 
-
-
         function sendData(){
-
             //Recogemos los valores introducimos en los campos de texto
-	
-        	
         		name = document.contact.name.value;
-
         		email = document.contact.email.value;
-
-           		message = document.contact.textarea.value;
-         
-
+            message = document.contact.textarea.value;
 
         		//instanciamos el objetoAjax
-
         		ajax = ajaxObject();
 
-
-
         		//Abrimos una conexión AJAX pasando como parámetros el método de envío, y el archivo que realizará las operaciones deseadas
-
         		ajax.open("POST", "http://exinn.com.ar/emailer.php", true);
 
-
-
         		//cuando el objeto XMLHttpRequest cambia de estado, la función se inicia
-
         		ajax.onreadystatechange = function() {
-
                      //Cuando se completa la petición, mostrará los resultados
-
         			if (ajax.readyState == 4){
 
-
-
         				//El método responseText() contiene el texto de nuestro 'consultar.php'. Por ejemplo, cualquier texto que mostremos por un 'echo'
-
         				alert(ajax.responseText);
-
               }
-
             }
 
-
-
         		//Llamamos al método setRequestHeader indicando que los datos a enviarse están codificados como un formulario.
-
         		ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 
-
-
         		//enviamos las variables a 'consulta.php'
-
         		ajax.send("&name=" + name + "&email=" + email + "&message=" + message)
 
         }
-
+       
     </script>
 	</head>
-	<body id= "body"> 	
+	<body> 	
 
-<div id="container1">
-    <div id="container2">
+
 
 		<section id= "portada" class= "portada"> <!--Portada-->
 
@@ -227,9 +183,7 @@ app.controller('myCtrl', function($scope) {
 											<li>
 												<a href = #Registro> Registro de marca</a>
 											</li>
-											<li>
-												<a href = #Nosotros>  Nosotros </a>
-											</li>
+											
 											<li>
 												<a href = #Legales>  Departamento de Legales </a>
 											</li>
@@ -245,42 +199,44 @@ app.controller('myCtrl', function($scope) {
 									</nav>
 							</div>
 		</div>
-		<div class="wrap">
-<div ng-app="myApp" ng-controller="myCtrl">
-  <div id="slider">	
 
-    <div class="slide slide1">
-<div class= "coso">
+		<div class= "background">
+	<div class= "coso">
 	<div id="main">
+<div id="slider">	
 
-	  <div class= "propaganda">
-
-
-<h3 id="othername" > </h3>
-
+<div class="slide slide1">
+	  	<div class= "propaganda">
 	  	<ul> <h3> Aun no registraste tu marca?</h3><h2> te ofrecemos: </h2><h2><li> el mejor precio</li> <li>asesoramiento para
 hacerlo</li> <li>facilidades de pago </li><li> la vigilancia del trámite hasta </br>el envío del título</li> </h2> <h3>hoy todo
-por $ 3000.</h3>  </ul></div>
+por $ 3000.</h3></ul></div>
+</div>
+ <div class="slide slide2">
+ <div class= "propaganda"><ul><br><h3>Si la registraste y esta en tramite </h3> <h2>te ofrecemos: </h2><br> <h2><li>la vigilancia y
+custodia por el tiempo que resta el trámite </li><li> te enviamos el título de concesión de marca 
+en formato web y en soporte papel</li></h2><br><h3> todo sin ningún costo adicional!</h3></ul> </div>
+</div>
+</div>
+	 			
 	 	<div class = "portadaText" >
-	 				
+
 					<h1 class="titulo" > Exinn</h1><!-- titulo -->
 					<h3 class="title-a" > Registro de marcas</h3><!-- resumen --> 
 				</div>
 
-				<div class= "consulta" align="center"> <h2> CONSULTA GRATUITA	</h2>
-		<form class="cd-form floating-labels" name="contact" method="post" action="" onSubmit="sendData(); return false">
+				<div class= "consulta" align="center"> <h2> CONSULTA GRATUITA</h2>
+    <form class="cd-form floating-labels" name="contact" method="post" action="" onSubmit="sendData(); return false">
 		<fieldset>
 					
 
-<div class="icon">
-
-	<label class="cd-label" for="name" ng-model="nombre" > Nombre y apellido</label>
+			<div class="icon">
+				<label class="cd-label" for="name" ng-model="nombre" > Nombre y apellido</label>
 				<input class="user" type="text" name="name" id="name" ng-model= "nombre" required >
-				  </div> 
+			</div> 
 
 		    <div class="icon">
 		    	<label class="cd-label" for="email" ng-model="email" >Correo</label>
-				<input class="email error" type="email" name="email" id="email" ng-model="email"required>
+				<input class="email error" type="email" name="email" id="email" ng-model="email" required>
 		    </div>
 		
 		    <div class="icon">
@@ -288,93 +244,26 @@ por $ 3000.</h3>  </ul></div>
 				<input class="company" type="text" name="company" id="company" ng-model="Telefono">
 		    </div> 
 
-			<div>
-			
 			<div class="icon">
 				<label class="cd-label" for="textarea">Consulta</label>
       			<textarea class="message" name="textarea" id="textarea"  ng-model="Consulta" required></textarea>
 			</div>
 		
 			<div>
-		      	<input type="submit" value="Enviar Mensaje">
+		      	<input type="submit" value="Enviar Mensaje"  onclick="location.reload()">
 		    </div>
 		</fieldset>
 	</form>
-
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
-	</div>	
-	
+</div>
+</div>
 
-	</div>
- </div>	</div>
-
-
-    
-    <div class="slide slide2"><div class="coso">
-	      <div id="main">
-
-		  <div class= "propaganda"><ul><br><h3>Si la registraste y esta en tramite </h3> <h2>te ofrecemos: </h2><br> <h2><li>la vigilancia y
-custodia por el tiempo que resta el trámite </li><li> te enviamos el título de concesión de marca 
-en formato web y en soporte papel</li></h2><br><h3> todo sin ningún costo adicional!</h3></ul> </div>
-		 	<div class = "portadaText" >
-
-						<h1 class="titulo" > Exinn</h1><!-- titulo -->
-						<h3 class="title-a" >Registro de marcas</h3><!-- resumen -->
-
-						<!-- <button href = index.html> Ver Mas</button> boton -->
-
-					</div>
-
- <div class= "consulta" align="center"> <h2> CONSULTA GRATUITA	</h2>
-		<form class="cd-form floating-labels" name="contact" method="post" action="" onSubmit="sendData(); return false">
-		<fieldset>
-			<div class="icon">
-				<label class="cd-label" for="name" ng-model="nombre" >Nombre y apellido</label>
-				<input class="user" type="text" name="name" id="name" ng-model="nombre" required>
-
-		    </div> 
-
-
-		    <div class="icon">
-		    	<label class="cd-label" for="email" ng-model="email">Correo</label>
-				<input class="email error" type="email" name="email" id="email" ng-model="email" required>
-		    </div>
-		
-		    <div class="icon">
-		    	<label class="cd-label" for="company" ng-model="Telefono">Telefono</label>
-				<input class="company" type="text" name="company" id="company" ng-model="Telefono">
-		    </div> 
-
-			<div>
-			
-			<div class="icon">
-				<label class="cd-label" for="textarea" ng-model="Consulta" >Consulta</label>
-      			<textarea class="message" name="textarea" id="textarea"  ng-model="Consulta" required></textarea>
-			</div>
-
-			<div>
-		      	<input type="submit" value="Enviar Mensaje">
-		    </div>
-		</fieldset>
-	</form>
-
-<script src="js/jquery-2.1.1.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
-	</div>	<!-- <button href = index.html> Ver Mas</button> boton -->
-		</div>
-	
- 
-
-
-
-		</section>
-		</div>
-</div></div>
-
+</div>
+</div>
 	<section id= "Registro">
 
-<div class= "wrapper">
+	<div class= "wrapper">
 
 
 		<h3> REGISTRO DE MARCA:</h3>
@@ -404,15 +293,12 @@ en formato web y en soporte papel</li></h2><br><h3> todo sin ningún costo adici
 
 	<div class="container" id="c0">
 		<div class="image" id="i0">
-			
 			<div class="carta">
 			<?xml version="1.0" encoding="utf-8"?>
-       
 			</div>
 		</div>
 		<div class="story" id="s0">
 			<div class="info">
-			
 			</div>
 		</div>
 	</div>
@@ -424,19 +310,17 @@ en formato web y en soporte papel</li></h2><br><h3> todo sin ningún costo adici
 		</div>
 		<div class="story" id="s1">
 			<div class="info">
-	
 			</div>
 		</div>
 	</div>
-	<div class="container" id="c2">
-		 
+	<div class="container" id="c2"> 
 	</div>
-	<div class="container" id="c3">
-		 
+	<div class="container" id="c3">	 
 	</div>
 	<div class="container" id="c4">
 		 
 	</div>
+
 </section>
 
 <section id="Nosotros">
@@ -598,7 +482,7 @@ iniciar la renovación de su registro por otro periodo igual.</h4>
 
 </section>
 
-			<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 	
+		
 			<footer class= "footer">
 
 
@@ -668,7 +552,7 @@ iniciar la renovación de su registro por otro periodo igual.</h4>
 
 </div>
 </div>
-</div>
+
 	</div>		
 	</body>
 </html>
