@@ -628,22 +628,32 @@ display: none;
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 800px) {
     h1 { font-size: 50px;}
     h2 { font-size: 40px;}
     h3 { font-size: 20px;}
     a  { font-size: 14px;}
     p  { font-size: 18px;}
     li  { font-size: 16px;}
-  .container {
-      text-align: center;
-  }
-  .container img {
-      margin: auto;
-      float: none;
-      display: block;
-  }
 
+
+
+}
+
+
+
+@media screen and (max-width: 800px) {
+.portadaText{
+  padding-left: 0px;
+  
+}
+  .container {
+     display: none;
+  }
+  
+  .cartas{
+    display: none;
+  }
 
   .menu{
     padding-left: 0vh;
@@ -678,21 +688,18 @@ display:none;
 }
 
 #main div {
-    flex: 0.2;
+    flex: 0.3;
 }
 
-.container{
+#c2{
   display: none;
 }
 
-
-}
-
-
-
-@media screen and (max-width: 800px) {
-.container{
+.wrapper2{
   display: none;
+}
+#Registro{
+  margin-bottom: 20px;
 }
 
 }
@@ -1117,16 +1124,16 @@ inputield */
 }
 
 
+.cartas{
+ height: 550px;
+}
+
 
 
 #Registro h4{
   padding-bottom: 20px;
 }
 
-
-#Registro {
-  margin-bottom: 550px
-}
 
 #Legales{
   margin-bottom: 100px;
