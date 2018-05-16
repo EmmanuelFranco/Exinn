@@ -131,8 +131,7 @@ margin-top:10px;
   }
 
   .logotiposmall img{
-  padding-top: 34px;
-  height: 54px;
+margin-top: 18px;
   }
   
 .consulta h2{
@@ -226,9 +225,31 @@ font-language-override:
 
 .menu {
   display: inline-block;
-  padding-left: 115vh;
+ 
+}
+.topnav {
+  overflow: hidden;background-color:   transparent; 
+  width:  100%;
 }
 
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+
+.topnav-right {
+  float: right;
+}
+
+.navigation{
+  width:  100%;
+}
 .smallMenu
 {
 padding-top: 20px;
@@ -238,7 +259,7 @@ padding-top: 20px;
 
 .menu li {
   display: inline-block;
-  padding: 10px 15px 7px 15px;
+  padding: 0 10px 0 10px;
   
 }
 .menu ul{
@@ -564,7 +585,7 @@ transition: .7s;
 
 .menu{
   display: inline-block;
-  padding-left: 69vh;
+
 }
 
 
@@ -586,11 +607,6 @@ transition: .7s;
  padding-right: 0px;
  margin: 0;
  }
-
-.menu{
-  display: inline-block;
-  padding-left: 50vh;
-}
 
 
 
@@ -622,18 +638,14 @@ font-size: 24px;
 font-size: 19px;
  }
 
-.menu{
-  display: inline-block;
-  padding-left: 39vh;
 
-}
 
 
 
 
 }
 @media screen and (max-width: 1024px) {
-.menu a  { font-size: 11px;}
+
 #c1 {
 display: none;
 }
@@ -653,7 +665,6 @@ display: none;
     h1 { font-size: 50px;}
     h2 { font-size: 40px;}
     h3 { font-size: 20px;}
-    a  { font-size: 14px;}
     p  { font-size: 18px;}
     li  { font-size: 16px;}
 
@@ -676,10 +687,10 @@ display: none;
     display: none;
     background-color:   red;
   }
-
-  .menu{
-    padding-left: 0vh;
-  }
+.menu{
+  display: inline-block;
+}
+ 
 
   .portadaText {
     padding-right: 10vh;
@@ -688,6 +699,7 @@ display: none;
   .menu a{
     font-size: 13px;
   }
+
   .propaganda h2{
 display:none;
  }
@@ -697,6 +709,7 @@ display:none;
   .propaganda li{
 display:none;
  }  
+
  .propaganda{ 
  margin-right: 50px; }
 
@@ -762,18 +775,30 @@ height:100px;
 
   }
 
+.portada{
+  height: 1000px;
+}
 .portadaText{
-  margin-top: 150px;
-    margin-left: 140px;
-    width: 100%;
 
-    padding: 0px; 
-
-    margin-bottom: 100px;
+   margin-left: auto;
+    margin-right: auto;
+    margin-top:150px;
+   
+  width:50%;
+   display: block;
 
 }
+
+.titulo-a{
+   
+   margin-bottom: 100px;
+
+}
+
+
 #main{
   display: block;
+  height: 150vh;
 }
 .consulta h2{
 
