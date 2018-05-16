@@ -84,7 +84,7 @@ margin-top:10px;
 
 
   .header { 
-  position: absolute  ;
+  position: fixed;
   background: transparent  ;  border-bottom: 1px rgba(0, 0, 0, 0.9);
   height: 75px;
   width: 100%;
@@ -92,7 +92,7 @@ margin-top:10px;
   z-index: 999;
   animation-fill-mode: forwards;
    animation-name: color;
-
+   display: flex;
   }
 
 
@@ -231,7 +231,7 @@ font-language-override:
 
 .smallMenu
 {
-padding-top: 10px;
+padding-top: 20px;
 }
 
 
@@ -271,7 +271,7 @@ background-color: #111011 ;
 #slider,
 .wrap,
 .slide-content {
- height: 370px;
+ height: 351px;
   overflow-x: hidden;
    overflow:hidden;
 
@@ -634,7 +634,6 @@ font-size: 19px;
 }
 @media screen and (max-width: 1024px) {
 .menu a  { font-size: 11px;}
-.logotipo img{ height: 20px;width: 30px; }
 #c1 {
 display: none;
 }
@@ -642,6 +641,9 @@ display: none;
 .wrapper2{
   margin-left: 100px;
 }
+
+
+#slider{display: none;}
 
 }
 
@@ -739,8 +741,11 @@ display:none;
 
     p  { font-size: 14px}
 
-    li  { font-size: 12px}
-
+    li  { font-size: 16px}
+.header{
+  display: inline-block;
+  position: absolute;
+}
 .footer .wrapper{
   display:  block;
 }
@@ -756,10 +761,10 @@ height:100px;
      animation-name: none;
 
   }
+
 .portadaText{
-
-   float: center;
-
+  margin-top: 150px;
+    margin-left: 140px;
     width: 100%;
 
     padding: 0px; 
@@ -767,10 +772,12 @@ height:100px;
     margin-bottom: 100px;
 
 }
-
+#main{
+  display: block;
+}
 .consulta h2{
 
-  padding-top: 110px;
+  padding-top: 10px;
     font-size: 20px;
 
 
@@ -881,8 +888,8 @@ display: block;
 #menu
 {
   position: absolute;
-  width: 80%;
-  height: 102.7vh;
+  width: 112%;
+  height: 102.3vh;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
@@ -1521,4 +1528,3 @@ background-image: url('../Images/marca5.jpg');
   position: absolute;
   top: 10%;
 }
-
