@@ -679,6 +679,15 @@ display: none;
   padding-left: 0px;
   
 }
+
+
+#main{ 
+ 
+  height:0;
+  padding-top: 400px;
+  padding-bottom: 300px;
+}
+
   .container {
      display: none;
   }
@@ -756,6 +765,7 @@ display:none;
     p  { font-size: 14px}
 
     li  { font-size: 16px}
+
 .header{
   display: inline-block;
   position: absolute;
@@ -780,7 +790,7 @@ height:100px;
 
 }
 .portadaText{
-  color:red;
+
    margin-left: auto;
     margin-right: auto;
     margin-top:0px;
@@ -917,7 +927,7 @@ display: block;
 {
   position: absolute;
   width: 120%;
-  height: 131vh;
+  height: 905px;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
