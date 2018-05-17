@@ -297,7 +297,7 @@ background-color: #111011 ;
    overflow:hidden;
 
 }
-.background {background-image: url('../Images/background2.jpg');margin: 1px auto;}
+.background {background-image: url('../Images/background2.jpg');margin: 0px auto;}
 
 
 
@@ -889,7 +889,7 @@ display:none;
  
   height: 642px;
   margin: -100px 0 0 -50px;
-  width: 200%;
+  width: 150%;
   padding-top: 120px;
   
   background:black;
@@ -960,9 +960,7 @@ height:100px;
 
   }
 
-.consulta{
 
-}
 .portadaText{
 
     margin-left: auto;
