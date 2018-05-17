@@ -779,6 +779,148 @@ display:none;
      .menu a{
    font-size: 14px;
   }
+#menu a
+{
+ font-weight:200;
+  font-size: 24px;
+}
+.small {
+ 
+     animation-name: none;
+
+  }
+
+
+.header{
+  position: absolute;
+}
+#menuToggle
+{
+ 
+  display: block;
+  position: relative;
+  top: 30px;
+  margin-left: 30px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; 
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+ 
+  height: 642px;
+  margin: -100px 0 0 -50px;
+  padding: 120px;
+  padding-top: 120px;
+  
+  background:black;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+.topnav{
+  display: none;
+}
+#menu a
+{
+ font-weight:200;
+  font-size: 20px;
+}
+#menu li
+{
+ padding: 10px 0;
+}
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
 
   }
 
@@ -861,7 +1003,7 @@ color:white;
 }
 
 .cd-form {
-display: block;
+  display: block;
   width: 50%;
 
   max-width: auto;
@@ -962,8 +1104,7 @@ display: block;
  */
 #menu
 {
-  position: absolute;
-  width: 120%;
+  
   height: 922px;
   margin: -100px 0 0 -50px;
   padding: 50px;
@@ -983,7 +1124,7 @@ display: block;
 #menu a
 {
  font-weight:200;
-  font-size: 20px;
+  font-size: 24px;
 }
 #menu li
 {
