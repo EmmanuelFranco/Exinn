@@ -780,7 +780,7 @@ height:100px;
 
 }
 .portadaText{
-
+  color:red;
    margin-left: auto;
     margin-right: auto;
     margin-top:0px;
@@ -917,7 +917,7 @@ display: block;
 {
   position: absolute;
   width: 120%;
-  height: 164vh;
+  height: 131vh;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
