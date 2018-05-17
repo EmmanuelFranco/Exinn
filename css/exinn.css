@@ -680,11 +680,13 @@ display: none;
   
 }
 
-
+.portadaText h3{
+  font-size: 19px;
+}
 #main{ 
  
   height:0;
-  padding-top: 400px;
+  padding-top: 300px;
   padding-bottom: 300px;
 }
 
@@ -696,6 +698,7 @@ display: none;
     display: none;
     background-color:   red;
   }
+
 .menu{
   display: inline-block;
 }
@@ -703,7 +706,7 @@ display: none;
 
   .portadaText {
     padding-right: 10vh;
-    padding-left: 5vh;
+    padding-left: 20vh;
   }
 
   .menu a{
@@ -799,9 +802,13 @@ height:100px;
    display: block;
 
 }
+.portadaText h3{
+     font-size: 18px;
+}
+
 
 .titulo-a{
-   
+
    margin-bottom: 100px;
 
 }
@@ -927,7 +934,7 @@ display: block;
 {
   position: absolute;
   width: 120%;
-  height: 905px;
+  height: 922px;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
