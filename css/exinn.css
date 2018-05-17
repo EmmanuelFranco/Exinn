@@ -989,6 +989,7 @@ height:100px;
   height:0;
   padding-top: 100px;
   padding-bottom: 780px;
+  z-index:999;
 }
 .consulta h2{
 
@@ -1028,7 +1029,7 @@ color:white;
 {
 
   display: block;
-  width: 40px;
+  width: 100%;
   height: 32px;
   position: absolute;
   top: -7px;
@@ -1102,7 +1103,7 @@ color:white;
  */
 #menu
 {
-  
+    position: absolute;
   height: 922px;
   margin: -100px 0 0 -50px;
   padding: 50px;
