@@ -259,13 +259,13 @@ padding-top: 20px;
 
 .menu li {
   display: inline-block;
-  padding: 0 10px 0 10px;
+  padding: 0 7px 0 7px;
   
 }
 .menu ul{
   display: inline-block;
 
- 
+   padding: 0 0 0 10px;
 }
 
 /*
@@ -607,6 +607,10 @@ transition: .7s;
  padding-right: 0px;
  margin: 0;
  }
+.smallMenu
+{
+padding-top: 23px;
+}
 
 
 
@@ -623,7 +627,7 @@ transition: .7s;
 @media screen and (max-width: 1280px) {
  
 .menu a{
- font-size: 15px;
+ font-size: 17px;
  padding-left: 0px;
  padding-right: 0px;
  margin: 0;
@@ -640,7 +644,10 @@ font-size: 19px;
 
 
 
-
+.smallMenu
+{
+padding-top: 24px;
+}
 
 
 }
@@ -657,6 +664,15 @@ display: none;
 
 #slider{display: none;}
 
+
+.portadaText {
+    padding-right: 5vh;
+    padding-left: 20vh;
+  }
+.smallMenu
+{
+padding-top: 25px;
+}
 }
 
 }
@@ -678,6 +694,10 @@ display: none;
 .portadaText{
   padding-left: 0px;
   
+}
+.smallMenu
+{
+padding-top: 26px;
 }
 
 .portadaText h3{
@@ -705,13 +725,11 @@ display: none;
  
 
   .portadaText {
-    padding-right: 10vh;
+    padding-right: 5vh;
     padding-left: 20vh;
   }
 
-  .menu a{
-    font-size: 13px;
-  }
+ 
 
   .propaganda h2{
 display:none;
@@ -752,6 +770,17 @@ display:none;
 
 }
 
+@media screen and (max-width:760px) {
+ 
+   .menu ul{
+    padding:0;
+   }
+
+     .menu a{
+   font-size: 14px;
+  }
+
+  }
 
 @media screen and (max-width: 500px) {
 
@@ -794,16 +823,17 @@ height:100px;
 }
 .portadaText{
 
-   margin-left: auto;
+    margin-left: auto;
     margin-right: auto;
     margin-top:0px;
-   
-  width:60%;
-   display: block;
+    width:33%;
+    display: block;
 
+     padding:0;
 }
 .portadaText h3{
      font-size: 18px;
+
 }
 
 
