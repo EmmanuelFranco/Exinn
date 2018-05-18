@@ -86,11 +86,14 @@ app.controller('myCtrl', function($scope) {
 	<head>
 		<title>Exinn</title>
 		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
 		<link rel="stylesheet" href="css/exinn.css"/>
 		<script src="js/modernizr.js"></script> <!-- Modernizr -->
 		
-
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+ 		<link rel="stylesheet" type="text/css" media="@media screen and (max-width: 780px)" href="css/index.css" />
+ 		<link rel="stylesheet" type="text/css" media="@media screen and (max-width: 1300px)" href="css/index.css" />
+ 		<link rel="srylesheet" type="text/css" media= "@media screen and (max-width: 768px)" href="scss/index.css"/>
+ 		<link rel="srylesheet" type="text/css" media= "@media screen and (max-width: 1200px)" href="scss/index.css"/>
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -280,7 +283,7 @@ en formato web y en soporte papel</li></h2><h3> todo sin ningún costo adicional
 
 			<div class="icon">
 				<label class="cd-label" for="textarea">Consulta</label>
-      			<textarea class="message" name="textarea" id="textarea"  ng-model="Consulta" required></textarea>
+      			<textarea class="message" name="message" id="textarea"  ng-model="Consulta" required></textarea>
 			</div>
 		
 			<div>
@@ -530,7 +533,7 @@ iniciar la renovación de su registro por otro periodo igual.</h4>
 						<div class= "contacto">
 						<h2> Contacto </h2>
 						<a href="tel:+573024456678"><h4><i class="fas fa-phone-square" style="font-size:16px; color:grey;" ></i> +573024456678</h4></a>
-						<a href="mailto:contacto@exinn.com"><h4><i class="fas fa-envelope"  style="font-size:16px; color:grey;"></i> contacto@exinn.com</h4></a>
+						<a href="mailto:contacto@exinn.com.ar"><h4><i class="fas fa-envelope"  style="font-size:16px; color:grey;"></i> contacto@exinn.com</h4></a>
 						<h4 href="page2.html">Envia un mensaje privado!</h4>
 						
 						</div>
@@ -552,13 +555,9 @@ iniciar la renovación de su registro por otro periodo igual.</h4>
     <svg class="c-icon"><use xlink:href="#icon--google"></use></svg>
 </a>
 
-
-
 <a href="#0" class="c-link c-link--instagram c-tooltip" >
     <svg class="c-icon"><use xlink:href="#icon--instagram"></use></svg>
 </a>
-
-
 <svg style="display: none">
     <symbol id="icon--facebook" viewBox="0 0 24 24">
         <path d="M19,4V7H17A1,1 0 0,0 16,8V10H19V13H16V20H13V13H11V10H13V7.5C13,5.56 14.57,4 16.5,4M20,2H4A2,2 0 0,0 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" />
@@ -579,26 +578,16 @@ iniciar la renovación de su registro por otro periodo igual.</h4>
         <path d="M12,20.45C10.81,20.45 10.1,19.94 9.47,19.5C9,19.18 8.58,18.87 8.08,18.79C6.93,18.73 6.59,18.79 5.97,18.9C5.86,18.9 5.73,18.87 5.68,18.69C5.5,17.94 5.45,17.73 5.32,17.71C4,17.5 3.19,17.2 3.03,16.83C3,16.6 3.07,16.5 3.18,16.5C4.25,16.31 5.2,15.75 6,14.81C6.63,14.09 6.93,13.39 6.96,13.32C7.12,13 7.15,12.72 7.06,12.5C6.89,12.09 6.31,11.91 5.68,11.7C5.34,11.57 4.79,11.29 4.86,10.9C4.92,10.62 5.29,10.42 5.81,10.46C6.16,10.62 6.46,10.7 6.73,10.7C7.06,10.7 7.21,10.58 7.25,10.54C7.14,8.78 7.05,7.25 7.44,6.38C8.61,3.76 11.08,3.55 12,3.55C12.92,3.55 15.39,3.76 16.56,6.38C16.95,7.25 16.86,8.78 16.75,10.54C16.79,10.58 16.94,10.7 17.27,10.7C17.54,10.7 17.84,10.62 18.19,10.46C18.71,10.42 19.08,10.62 19.14,10.9C19.21,11.29 18.66,11.57 18.32,11.7C17.69,11.91 17.11,12.09 16.94,12.5C16.85,12.72 16.88,13 17.04,13.32C17.07,13.39 17.37,14.09 18,14.81C18.8,15.75 19.75,16.31 20.82,16.5C20.93,16.5 21,16.6 20.97,16.83C20.81,17.2 20,17.5 18.68,17.71C18.55,17.73 18.5,17.94 18.32,18.69C18.27,18.87 18.14,18.9 18.03,18.9C17.41,18.79 17.07,18.73 15.92,18.79C15.42,18.87 15,19.18 14.53,19.5C13.9,19.94 13.19,20.45 12,20.45Z" />
     </symbol>
 </svg>
-</div>	
-								
-							    
-
+</div>				
 								</div>
-
-
 				</div>
 		<div class = "StackCode">
 		<br>
 		<h5>Powered by  Stack code.</h5>
-
 		</div>	
-
 	</footer>
-
-
 </div>
 </div>
-
 	</div>		
 	</body>
 </html>
