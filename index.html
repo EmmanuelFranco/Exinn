@@ -129,6 +129,7 @@ app.controller('myCtrl', function($scope) {
             //Recogemos los valores introducimos en los campos de texto
         		name = document.contact.name.value;
         		email = document.contact.email.value;
+						phone = document.contact.phone.value;
             message = document.contact.textarea.value;
 
         		//instanciamos el objetoAjax
@@ -151,7 +152,7 @@ app.controller('myCtrl', function($scope) {
         		ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 
         		//enviamos las variables a 'consulta.php'
-        		ajax.send("&name=" + name + "&email=" + email + "&message=" + message)
+        		ajax.send("&name=" + name + "&email=" + email + "&phone=" + phone + "&message=" + message)
 
         }
 
@@ -275,15 +276,15 @@ en formato web y en soporte papel</li></h2><h3> todo sin ningún costo adicional
 		    	<label class="cd-label" for="email" ng-model="email" >Correo</label>
 				<input class="email error" type="email" name="email" id="email" ng-model="email" required>
 		    </div>
-		
+
 		    <div class="icon">
 		    	<label class="cd-label" for="company"  ng-model="Telefono" >Teléfono</label>
-				<input class="company" type="text" name="phone" id="company" ng-model="Telefono">
+				<input class="company" type="text" name="phone" id="phone" ng-model="Telefono">
 		    </div>
 
 			<div class="icon">
 				<label class="cd-label" for="textarea">Consulta</label>
-      			<textarea class="message" name="message" id="textarea"  ng-model="Consulta" required></textarea>
+      			<textarea class="message" id="textarea"  ng-model="Consulta" required></textarea>
 			</div>
 
 			<div>
