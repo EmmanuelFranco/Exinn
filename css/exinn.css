@@ -395,15 +395,16 @@ font-size: 25px;
 }
 
 .box{
-
+  float: left;
   opacity: 1;
-  margin-left: 10vh;
-  width: 550px;
+  margin-left: 1vh;
+  width: 500px;
   background-color:rgba(255,255,255,255.5);
  
   box-shadow: 1px 1px 2px #black inset,
               -1px -1px 2px #fff inset;
-  border-radius: 25px;   
+  border-radius: 25px; 
+  margin-top: 7vh;  
 }
 
 
@@ -651,7 +652,9 @@ font-size: 24px;
 font-size: 19px;
  }
 
-
+.box {
+  width: 100%;
+}
 
 .smallMenu
 {
@@ -1566,6 +1569,7 @@ height: 100%;
     border-bottom: 1px solid #eee;
     padding: 20px;
     text-align: center;
+
 }
 
 .price .grey {
@@ -1602,7 +1606,6 @@ height: 100%;
 }
 
 #c5 {
-background-image: url('../Images/marca5.jpg'); 
   left: 320%;
   z-index: 0;
  
@@ -1613,7 +1616,7 @@ background-image: url('../Images/marca5.jpg');
 
 
 #c1 {
-  background-image: url('../Images/marca1.jpg'); 
+  
   box-shadow: 0px 1px 10px black;
 
   left: 100%;
@@ -1630,18 +1633,18 @@ background-image: url('../Images/marca5.jpg');
   perspective: 900px; 
   box-shadow: 0px 1px 10px black;
   
-background-image: url('../Images/marca3.jpg'); 
+
 }
 #c2 {
-background-image: url('../Images/marca2.jpg'); 
+
   left: -100%;
   z-index: 0;
- 
+ height: 100%;width: 100%;
   box-shadow: 0px 1px 10px black;
 }
 
 #c3 {
-background-image: url('../Images/marca5.jpg'); 
+
   left: -220%;
   z-index: 0;
  
@@ -1650,7 +1653,7 @@ background-image: url('../Images/marca5.jpg');
 #c4 {
   left: 220%;
   z-index: 0;
- background-image: url('../Images/marca.jpg');
+
   box-shadow: 0px 1px 10px black;
 }
 
@@ -1675,23 +1678,246 @@ background-image: url('../Images/marca5.jpg');
   top: 10%;
 }
 
-/* Style inputs */
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
+
+
+
+
+
+ .Numero h2 {
+    float:left;
+    padding-bottom: 60px;
+    line-height:10px; font-size:60px;
+}
+.Texto h4 {
+  margin-left: 8vh;
+  padding-top: 10px;
+   
 }
 
+.Texto2 h4 {
+  margin-left: 8vh;
+  padding-top: 20px;
+   
+}
+
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cd-pricing-container li{
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+
+
+
+
+.cd-pricing-container {
+  width: 90%;
+  max-width: 1170px;
+}
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+
+ 
+  .cd-has-margins .cd-pricing-list > li {
+    width: 49%;
+    float: left;
+    margin-right: 1.5%;
+    border-radius: 4px 4px 6px 6px;
+    overflow: hidden;
+  }
+
+
+  .cd-has-margins .cd-pricing-list > li:last-of-type {
+    margin-right: 0;
+  }
+  .cd-has-margins .cd-pricing-list > li::before {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .cd-full-width .cd-pricing-list > li {
+    padding: 2.5em 0;
+  }
+}
+
+
+.cd-pricing-header {
+    height: auto;
+    padding: 1.9em 0.9em 1.6em;
+    pointer-events: auto;
+    text-align: center;
+    color: #173d50;
+    background-color: transparent;
+}
+.cd-pricing-header h2 {
+  margin-bottom: 3px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.cd-popular .cd-pricing-header {
+  color: #e97d68;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .cd-pricing-header {
+    height: auto;
+    padding: 0.9em 0.9em 1.6em;
+    pointer-events: auto;
+    text-align: center;
+    color: #173d50;
+    background-color: transparent;
+  }
+  .cd-popular .cd-pricing-header {
+    color: #e97d68;
+    background-color: transparent;
+  }
+
+  .cd-has-margins .cd-pricing-list > li, .cd-has-margins .cd-pricing-list > li.cd-popular
+  {
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+  }
+
+
+}
+
+  .cd-has-margins .cd-pricing-list > li, .cd-has-margins .cd-pricing-list > li.cd-popular
+  {
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+  }
+  .cd-pricing-features li:nth-of-type(2n+1) {
+    background-color: rgba(23, 61, 80, 0.06);
+  }
+   .cd-has-margins .cd-pricing-list > li {
+   
+    overflow: hidden;
+  }
+
+
+@media only screen and (min-width: 1080px) {
+  .cd-value {
+    font-size: 7rem;
+    font-weight: 300;
+  }
+
+
+
+  .cd-duration {
+    font-size: 1.4rem;
+  }
+}
+.cd-pricing-body {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+@media only screen and (min-width: 768px) {
+  .cd-pricing-body {
+    overflow-x: visible;
+  }
+
+}
+.cd-pricing-body ul{
+    padding:0;
+  }
+.cd-pricing-features {
+  width: 100%;
+}
+
+.cd-pricing-features:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-pricing-features li {
+  
+  padding: 1.6em 1em;
+  font-size: 1.4rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+
+.cd-pricing-footer {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  /* on mobile it covers the .cd-pricing-header */
+  height: 80px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-pricing-footer {
+    position: relative;
+    height: auto;
+    padding: 1.8em 0;
+    text-align: center;
+  }
+
+  .cd-has-margins .cd-pricing-footer {
+    padding-bottom: 0;
 
   }
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-    .column, input[type=submit] {
-        width: 100%;
-        margin-top: 0;
-    }
+
 }
 
+
+@media only screen and (min-width: 768px) {
+  .cd-select {
+    position: static;
+    display: inline-block;
+    height: auto;
+    padding: 1.3em 3em;
+    color: #FFFFFF;
+    border-radius: 2px;
+    background-color: #0c1f28;
+    font-size: 1.4rem;
+    text-indent: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .no-touch .cd-select:hover {
+    background-color: #112e3c;
+  }
+  .cd-popular .cd-select {
+    background-color: #e97d68;
+  }
+  .no-touch .cd-popular .cd-select:hover {
+    background-color: #ec907e;
+  }
+  
+  .cd-has-margins .cd-select {
+    display: block;
+    padding: 1.7em 0;
+    border-radius: 0 0 4px 4px;
+  }
+
+}
+#Precios{
+  padding-bottom: 50px;
+ }
