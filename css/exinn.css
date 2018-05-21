@@ -559,8 +559,9 @@ transition: .7s;
  
 
 .contenedor{
- padding-left: 150px;
-    padding-right: 150px;}
+ padding-left: 100px;
+    padding-right: 100px;
+  }
 
 .columns {
     float: left;
@@ -702,6 +703,13 @@ li{
 
 
 @media screen and (max-width: 800px) {
+
+
+.cd-pricing-container {
+  width: 100%;
+  max-width:none;
+}
+
 
   .columns{
 width: 100%;
@@ -1727,11 +1735,17 @@ Main Components
 
 
 .cd-pricing-container {
-  width: 90%;
-  max-width: 1170px;
+  width: 100%;
+  margin-right: 1%;
+  margin-left: 1%;
+  padding: 0;
 }
 
 
+.cd-pricing-container ul {
+ 
+  padding: 0;
+}
 
 
 
@@ -1739,9 +1753,10 @@ Main Components
 
  
   .cd-has-margins .cd-pricing-list > li {
-    width: 49%;
+    width: 48%;
     float: left;
-    margin-right: 1.5%;
+    margin-right: 2%;
+
     border-radius: 4px 4px 6px 6px;
     overflow: hidden;
   }
@@ -1749,6 +1764,7 @@ Main Components
 
   .cd-has-margins .cd-pricing-list > li:last-of-type {
     margin-right: 0;
+    margin-left: 0;
   }
   .cd-has-margins .cd-pricing-list > li::before {
     display: none;
