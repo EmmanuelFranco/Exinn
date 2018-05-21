@@ -36,7 +36,7 @@
 <script>
 	$("#slider > div:gt(0)").hide();
 
-setInterval(function() {
+setInterval(function() { 
   $('#slider > div:first')
     .fadeOut(250)
     .next()
@@ -58,7 +58,7 @@ function navbarScroll() {
     $('.footer').addClass('smallerfooter');
     $('.menu').addClass('smallMenu');
      $('.logotipo').addClass('logotiposmall');
-
+		
 
   } else if (y < 70) {
     $('.footer').removeClass('smallerfooter');
@@ -71,8 +71,8 @@ function navbarScroll() {
 
 
   }
-
-}
+  
+}		
 </script>
 
 <script>
@@ -81,30 +81,34 @@ app.controller('myCtrl', function($scope) {
     $scope.Valores= "";
 });
 </script>
-
+        	
 
 	<head>
 		<title>Exinn</title>
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="css/exinn.css"/>
 		<script src="js/modernizr.js"></script> <!-- Modernizr -->
+		
+
 
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
- 		<link rel="stylesheet" type="text/css" media="@media screen and (max-width: 780px)" href="css/index.css" />
- 		<link rel="stylesheet" type="text/css" media="@media screen and (max-width: 1300px)" href="css/index.css" />
- 		<link rel="srylesheet" type="text/css" media= "@media screen and (max-width: 768px)" href="scss/index.css"/>
- 		<link rel="srylesheet" type="text/css" media= "@media screen and (max-width: 1200px)" href="scss/index.css"/>
+		<link rel="stylesheet" type="text/css" media="@media screen and (max-width: 780px)" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" media="@media screen and (max-width: 1300px)" href="css/index.css" />
+		<link rel="srylesheet" type="text/css" media= "@media screen and (max-width: 768px)" href="scss/index.css"/>
+		<link rel="srylesheet" type="text/css" media= "@media screen and (max-width: 1200px)" href="scss/index.css"/>
+
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<style type="text/css" media="screen">
 		A:link {color: white; text-decoration: none }
-
+		
 		A:visited {color: white; text-decoration: none }
 		#link { color: white; text-decoration: none }
 
 		</style>
-
+   		
 
  <script type="text/javascript">
       	function ajaxObject(){
@@ -129,14 +133,13 @@ app.controller('myCtrl', function($scope) {
             //Recogemos los valores introducimos en los campos de texto
         		name = document.contact.name.value;
         		email = document.contact.email.value;
-						phone = document.contact.phone.value;
             message = document.contact.textarea.value;
 
         		//instanciamos el objetoAjax
         		ajax = ajaxObject();
 
         		//Abrimos una conexión AJAX pasando como parámetros el método de envío, y el archivo que realizará las operaciones deseadas
-        		ajax.open("POST", "https://exinn.com.ar/emailer.php", true);
+        		ajax.open("POST", "http://exinn.com.ar/emailer.php", true);
 
         		//cuando el objeto XMLHttpRequest cambia de estado, la función se inicia
         		ajax.onreadystatechange = function() {
@@ -152,13 +155,13 @@ app.controller('myCtrl', function($scope) {
         		ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 
         		//enviamos las variables a 'consulta.php'
-        		ajax.send("&name=" + name + "&email=" + email + "&phone=" + phone + "&message=" + message)
+        		ajax.send("&name=" + name + "&email=" + email + "&message=" + message)
 
         }
-
+       
     </script>
 	</head>
-	<body>
+	<body> 	
 
 
 
@@ -173,7 +176,7 @@ app.controller('myCtrl', function($scope) {
 								<a href  = index.html > </a>
 								</figure>
   <div class="topnav-right">
-
+   
 									<nav class = "menu"> <!--menu-->
 										<ul >
 											<li>
@@ -182,11 +185,11 @@ app.controller('myCtrl', function($scope) {
 											<li>
 												<a href = #Registro  style="float: right;"> Registro de marca</a>
 											</li>
-
+											
 											<li>
 												<a href = #Legales  style="float: right;">  Departamento de Legales </a>
 											</li>
-
+											
 											<li>
 												<a href = #Precios  style="float: right;"> Precios </a>
 											</li>
@@ -198,15 +201,15 @@ app.controller('myCtrl', function($scope) {
 									</nav>
   </div>
 </div>
-
+		
 				<div id="menuToggle">
-
+   
     <input type="checkbox" />
-
+    
     <span></span>
     <span></span>
-    <span></span>
-
+    <span></span>   	
+    
     <ul id="menu">
      <li>
 											<a href  = index.html > Home</a>
@@ -214,11 +217,11 @@ app.controller('myCtrl', function($scope) {
 											<li>
 												<a href = #Registro> Registro de marca</a>
 											</li>
-
+											
 											<li>
 												<a href = #Legales>  Departamento de Legales </a>
 											</li>
-
+											
 											<li>
 												<a href = #Precios> Precios </a>
 											</li>
@@ -228,67 +231,66 @@ app.controller('myCtrl', function($scope) {
 											</li>
     </ul>
   </div>
-</nav>
+</nav>		
 
-
+									
 
 
 		</div>
 
 
-
+	
 	<div class= "coso">
 	<div id="main">
-
-<div id="slider">
+		
+<div id="slider">	
 
 <div class="slide slide1">
 	  	<div class= "propaganda">
 	  	<ul> <h3> Aun no registraste tu marca?</h3><h2> te ofrecemos: </h2><h2><li> el mejor precio</li> <li>asesoramiento para
-hacerlo</li> <li>facilidades de pago </li><li> la vigilancia del trámite hasta </br>el envío del título</li> </h2> <h3>hoy todo
-por $ 3000.</h3></ul></div>
+hacerlo</li> <li>facilidades de pago </li><li> la vigilancia del trámite hasta </br>el envío del título</li> <br> </h2> </ul></div>
 </div>
  <div class="slide slide2">
  <div class= "propaganda"><ul><h3>Si la registraste y esta en tramite </h3> <h2>te ofrecemos: </h2><br> <h2><li>la vigilancia y
-custodia por el tiempo que resta el trámite </li><li> te enviamos el título de concesión de marca
+custodia por el tiempo que resta el trámite </li><li> te enviamos el título de concesión de marca 
 en formato web y en soporte papel</li></h2><h3> todo sin ningún costo adicional!</h3></ul> </div>
 </div>
 </div>
-
+	 	
 
 	 	<div class = "portadaText" >
 
 					<h1 class="titulo" > Exinn</h1><!-- titulo -->
-					<h3 class="titulo-a" > Registro de marcas</h3><!-- resumen -->
+					<h3 class="titulo-a" > Registro de marcas</h3><!-- resumen --> 
 				</div>
 
 				<div class= "consulta" align="center"> <h2> CONSULTA GRATUITA</h2>
     <form class="cd-form floating-labels" name="contact" method="post" action="" onSubmit="sendData(); return false">
 		<fieldset>
-
+					
 
 			<div class="icon">
 				<label class="cd-label" for="name" ng-model="nombre" > Nombre y apellido</label>
-				<input class="user" type="text" id="name" ng-model= "nombre" required >
-			</div>
+				<input class="user" type="text" name="name" id="name" ng-model= "nombre" required >
+			</div> 
 
 		    <div class="icon">
 		    	<label class="cd-label" for="email" ng-model="email" >Correo</label>
-				<input class="email error" type="email" id="email" ng-model="email" required>
+				<input class="email error" type="text" name="email" id="email" ng-model="email" required>
 		    </div>
-
+		
 		    <div class="icon">
-		    	<label class="cd-label" for="company"  ng-model="Telefono" >Teléfono</label>
-				<input class="company" type="text" id="phone" ng-model="Telefono">
-		    </div>
+		    	<label class="cd-label" for="company"  ng-model="Telefono" >Telefono</label>
+				<input class="company" type="text" name="company" id="company" ng-model="Telefono">
+		    </div> 
 
 			<div class="icon">
 				<label class="cd-label" for="textarea">Consulta</label>
-      			<textarea class="message" id="textarea"  ng-model="Consulta" required></textarea>
+      			<textarea class="message" name="textarea" id="textarea"  ng-model="Consulta" required></textarea>
 			</div>
-
+		
 			<div>
-		      	<input type="submit" value="Enviar Mensaje">
+		      	<input type="submit" value="Enviar Mensaje"  onclick="location.reload()">
 		    </div>
 		</fieldset>
 	</form>
@@ -309,26 +311,26 @@ en formato web y en soporte papel</li></h2><h3> todo sin ningún costo adicional
 
 		<h3> REGISTRO DE MARCA:</h3>
 		<h3> ¿Cómo se registra una marca?</h3>
-
-
+											
+											
 												<h4>Se registran distintos tipo de marcas, ya sea compuesta por el nombre que identificara el producto o servicio, por un logo o por ambos.
-
+											
 												<h4><strong>El primer paso</strong> que se debe realizar es verificar la viabilidad, hacer un estudio preliminar y buscar los antecedentes que puedan tener la marca que se quiere registrar evitando  conflictos con las marcas que ya están registradas, pudiendo en caso de haber alguna similar correr el riesgo de una denegatoria o una oposición, con este examen previo se asegura el éxito de la solicitud que se presenta.</h4>
-
+											
 												<h4><strong> Registro del cliente:</strong> ingresando sus datos personales a través de la web, via e mail, telefónicamente o personalmente se procesaran los datos para la solicitud que se presenta en el Instituto Nacional de Propiedad Industrial INPI y se emite la factura correspondiente.</h4>
 
-
+											
 												<h4><strong>Pago:</strong> emitida la factura se deberá efectuar el pago  a través de depósito bancario, transferencia o pago con tarjeta de crédito, una vez acreditado se emitirá la factura A o B de cancelación.</h4>
 
-
+											
 												<h4><strong>Presentación en el registro:</strong> se presenta la solicitud con prioridad en el tiempo y sin gastos extras, con la inmediatez necesaria para asegurar su prioridad y el éxito del registro, se asignara un número de acta que será informado para que pueda tener un seguimiento personal de sus registros.</h4>
 
-
+										
 												<h4><strong>Custodia: </strong> se realiza una custodia permanente durante todo el procedimiento, a fin de asegurar que todos los trámites legales y administrativos que puedan presentarse, sean resuelto por nuestros especialistas en tiempo y forma.</h4>
 
-												<h4><strong>Retiro y entrega del título de concesión de su marca registrada:</strong> finalizado el trámite, se le hará entrega vía web y en formato papel del título emitido por las autoridades del INPI, acreditando la titularidad de su marca por un plazo de 10 años.</h4>
-
-						</div>
+												<h4><strong>Retiro y entrega del título de concesión de su marca registrada:</strong> finalizado el trámite, se le hará entrega vía web y en formato papel del título emitido por las autoridades del INPI, acreditando la titularidad de su marca por un plazo de 10 años.</h4>	
+										
+						</div>			
 		<div class= "cartas">
 <div class="wrapper2">
 
@@ -354,12 +356,12 @@ en formato web y en soporte papel</li></h2><h3> todo sin ningún costo adicional
 			</div>
 		</div>
 	</div>
-	<div class="container" id="c2">
+	<div class="container" id="c2"> 
 	</div>
-	<div class="container" id="c3">
+	<div class="container" id="c3">	 
 	</div>
 	<div class="container" id="c4">
-
+		 
 	</div>
 
 </div>
@@ -369,92 +371,92 @@ en formato web y en soporte papel</li></h2><h3> todo sin ningún costo adicional
 <section id="Nosotros">
 	<div class ="wrapper">
 
-
+	
 	<h2 align="center">¿Porque elegirnos?</h2>
-		<div class ="nosotrosText">
+		<div class ="nosotrosText"> 
 			<h5>
 			EXINN brinda el servicio más eficiente, los mejores precios y la seguridad de no pagar costos adicionales por la presentación inmediata de la solicitud en el INPI, ni gastas adicionales por emisión del título de concesión.<br>
 			Somos un equipo de trabajo que garantiza una atención personalizada y un seguimiento de cada registro, procurando el éxito hasta la finalización. Otorgamos además el servicio de vigilancia y mantenemos un contacto permanente en caso de necesitar resolver cualquier consulta.<br>
 			</h5>
-
+		
 		<br></div>
 	</div>
 </section>
 
 <section id= "Legales">
-
+		
 	<div class = "wrapper">
 
-	<h3 > Departamento de Legales:	</h3>
+	<h3 > Departamento de Legales:	</h3>	
 	<h4><br> EXINN brinda el servicio de registro de marcas garantizando que todo el proceso de la registración esta supervisado por profesionales en la materia; agentes de la propiedad Industrial y Abogados.
 Sabemos muy bien que el ámbito de comercialización de Productos y Servicios contiene áreas del derecho empresarial y comercial que en ocasiones presentas consultas jurídicas en distintos ámbitos, es por ello que en el Departamento de Legales contamos con abogados especializados en:
 </h4>
 
-<div class= "Act">
-								<div class= "Act1" >
-														<div class = "Act2">
+<div class= "Act"> 
+								<div class= "Act1" > 
+														<div class = "Act2"> 
 														<img src ="./Images/android.png" width= "70" / >
 														</div>
 														<h4 align="center">Derecho  de propiedad <br>intelectual</h4>
-												</div>
-
-									<div class= "Act1" >
-										<div class = "Act2">
+												</div>	
+									
+									<div class= "Act1" > 
+										<div class = "Act2"> 
 										<img src ="./Images/commerce.png" width= "70"/ >
 										</div>
 										<h4 align="center">Derecho Comercial</h4>
 										</div>
 
-											<div class= "Act1" >
-
-											<div class = "Act2">
+											<div class= "Act1" > 
+									
+											<div class = "Act2"> 
 											<img src ="./Images/pc.png" width= "70" / >
-											</div>
+											</div>	
 											<h4 align="center">Derecho tributario</h4>
 											</div>
-										<div class= "Act1" >
-
-														<div class = "Act2">
+										<div class= "Act1" > 
+												
+														<div class = "Act2"> 
 														<img src ="./Images/society.png" width= "70" / >
-														</div>
+														</div>	
 														<h4 align="center">Derecho Societario</h4>
-														</div>
+														</div>	
+							
+</div>	
 
-</div>
-
-
-				<div class= "Act">
-
-													<div class= "Act1" >
-
-															<div class = "Act2">
+				
+				<div class= "Act"> 
+													
+													<div class= "Act1" > 
+														
+															<div class = "Act2"> 
 														<img src ="./Images/mediacion.png" width= "70"/ >
 														</div>
-
+														
 														<h4 align="center">Litigios, mediación y<br>  arbitraje</h4>
 													</div>
-														<div class= "Act1" >
-
-														<div class = "Act2">
+														<div class= "Act1" > 
+												
+														<div class = "Act2"> 
 														<img src ="./Images/laboral.png" width= "70" / >
-														</div>
+														</div>	
 														<h4 align="center">Derecho Laboral</h4>
 														</div>
-
-													<div class= "Act1" >
-														<div class = "Act2">
+												
+													<div class= "Act1" > 
+														<div class = "Act2"> 
 														<img src ="./Images/android.png" width= "70" / >
 														</div>
 														<h4 align="center">Derecho empresarial</h4>
-													</div>
-												<div class= "Act1" >
-										<div class = "Act2">
+													</div>		
+												<div class= "Act1" > 
+										<div class = "Act2"> 
 										<img src ="./Images/web.png" width= "70"/ >
 										</div>
 										<h4 align="center">Derecho Aduanero</h4>
 									</div>
-
-					</div>
+														
+					</div>			
 
 		</div>
 
@@ -462,70 +464,52 @@ Sabemos muy bien que el ámbito de comercialización de Productos y Servicios co
 					<h4 align="center" >*Todos los profesionales estan dispuestos a resolver las consultas que puedan plantear sin ningún costo, otorgando beneficios y descuentos importantes a los clientes de registro de marcas.</h4></div>
 
 </section>
-<section class= "Precios" id= "Precios">
-<div class=wrapper>
+<section class= "Precios" id= "Precios"> 
 
+<div class="wrapper">
+	<div class = "contenedor">
 <h1 style="text-align:center" id ="price" >Precios</h1>
 				<div class="columns">
 			  <ul class="price" >
 			    <li class="header2">Basico</li>
 			    <li class="grey"> $ 3.000</li>
-			    <li>Estudio de viabilidad de la marca</li>
-			    <li>Aranceles y tasas del INPI</li>
-			    <li>Asesoramiento personalizado <br>resueltas por los
-					profesionales en la materia.</li>
-			    <li>Seguimiento del tramite</li>
-			    <li>Retiro y entrega del titulo de concesión</li>
-			    <li></li>
-			    <li class="grey"><a href="#" class="button">Sign Up</a></li>
+			    <li>Estudio de viabilidad de la marca <svg class="c-icon"><img src ="./img/checked2.svg" height="15px"></img></svg></li>
+			    <li>Aranceles y tasas del INPI <svg class="c-icon"><img src ="./img/checked2.svg" height="15px"></img></svg></li>
+			    <li>Asesoramiento personalizad <svg class="c-icon"><img src ="./img/checked2.svg" height="15px"></img></svg></li>
+			    <li>Seguimiento del tramite <svg class="c-icon"><img src ="./img/checked2.svg" height="15px"></img></svg></li>
+			    <li>Retiro y entrega del titulo de concesión <svg class="c-icon"><img src ="./img/checked2.svg" height="15px"></img></svg></li> 
+			      <li style = "color:grey">  Custodia  <svg class="c-icon"><img src ="./img/error.svg" height="15px"></img></svg></li>  
+			    <li class="grey"><a href="#" class="button">Consultar</a> </li>
 			  </ul><h5>*Brindando la posibilidad de oponerse a los mismos para garantizar la
 originalidad de su marca registrada.</h5>
 			</div>
 
 			<div class="columns">
-			 <ul class="price" >
-			    <li class="header2">Plus</li>
-			    <li class="grey"> $ 3.500</li>
-			    <li>Estudio de viabilidad de la marca</li>
-			    <li>Aranceles y tasas del INPI</li>
-			    <li>Asesoramiento personalizado </li>
-			    <li>Seguimiento del tramite</li>
-			    <li>Retiro y entrega del titulo de concesión</li>
-			    <li>5 años de custodia y vigilancia
-					de la marca </li>
-
-			    <li class="grey"><a href="#" class="button">Sign Up</a></li>
-			  </ul>	<h4>*Alertando sobre posibles registros similares que
-					puedan aparecer y brindando soporte para garantizar la originalidaid de su marca</h4>
-			</div>
-
-
-			<div class="columns">
 			  <ul class="price">
-			    <li class="header2">Premium</li>
-			    <li class="grey">$ 4000</li>
-			    <li>Estudio de viabilidad de la marca</li>
-			    <li>Aranceles y tasas del INPI</li>
-			    <li>Asesoramiento personalizado </li>
-			    <li>Seguimiento del tramite</li>
-			    <li>Retiro y entrega del titulo de concesión</li>
+			    <li class="header2">Plus</li>
+			    <li class="grey"> $ 4.000</li>
+			    <li>Estudio de viabilidad de la marca <svg class="c-icon"><img src ="./img/checked2.svg" height="15px"></img></svg></li>
+			    <li>Aranceles y tasas del INPI <svg class="c-icon"><img src ="./img/checked2.svg" height="15px"></img></svg></li>
+			    <li>Asesoramiento personalizado <svg class="c-icon"><img src ="./img/checked2.svg" height="15px"></img></svg></li>
+			    <li>Seguimiento del tramite <svg class="c-icon"><img src ="./img/checked2.svg" height="15px"></img></svg></li>
+			    <li>Retiro y entrega del titulo de concesión <svg class="c-icon"><img src ="./img/checked2.svg" height="15px"></img></svg></li>			    
 			    <li>Custodia por el plazo
-					de 10 años</li>
-			    <li class="grey"><a href="#" class="button">Sign Up</a></li>
-			  </ul><h4>*Que es el periodo de vigencia de su concesión y se lo alertara en tiempo para
+					de 10 años  <svg class="c-icon"><img src ="./img/checked.svg" height="15px"></img></svg></li>
+			    <li class="grey"><a href="#" class="button">Consultar</a></li>
+			  </ul><h4>*Años (10) que cubre el periodo de vigencia de su concesión y se lo alertara en tiempo para
 iniciar la renovación de su registro por otro periodo igual.</h4>
 			</div>
-		<div >
-
-
+		<div > 
 
 </div>
-</div>
+
+</div>	
+</div> 
 
 
 </section>
 
-
+		
 			<footer class= "footer">
 
 
@@ -534,33 +518,33 @@ iniciar la renovación de su registro por otro periodo igual.</h4>
 						<div class= "contacto">
 						<h2> Contacto </h2>
 						<a href="tel:+573024456678"><h4><i class="fas fa-phone-square" style="font-size:16px; color:grey;" ></i> +573024456678</h4></a>
-						<a href="mailto:contacto@exinn.com.ar"><h4><i class="fas fa-envelope"  style="font-size:16px; color:grey;"></i> contacto@exinn.com</h4></a>
-						<h4 href="page2.html">Envia un mensaje privado!</h4>
-
+						<a href="mailto:contacto@exinn.com"><h4><i class="fas fa-envelope"  style="font-size:16px; color:grey;"></i> contacto@exinn.com</h4></a>
+						<br>
+						
 						</div>
 <img src ="./Images/logo2.png"  height=20% width="100" />
 
-						<div class="col1">
+						<div class="col1"> 
 							<h2>Social media </h2>
-							<div class="SocialMediaButtons">
-
-<a href="#0" class="c-link c-link--facebook c-tooltip" aria-label="">
+							<div class="SocialMediaButtons">	
+															
+<a href="https://www.facebook.com" class="c-link c-link--facebook c-tooltip" aria-label="" >
     <svg class="c-icon"><use xlink:href="#icon--facebook"></use></svg>
 </a>
 
-<a href="#0" class="c-link c-link--twitter c-tooltip" >
-    <svg class="c-icon"><use xlink:href="#icon--twitter"></use></svg>
-</a>
-
-<a href="#0" class="c-link c-link--google c-tooltip" >
-    <svg class="c-icon"><use xlink:href="#icon--google"></use></svg>
-</a>
-
-<a href="#0" class="c-link c-link--instagram c-tooltip" >
+<a href="https://www.instagram.com" class="c-link c-link--instagram c-tooltip" >
     <svg class="c-icon"><use xlink:href="#icon--instagram"></use></svg>
 </a>
+
+<a href="https://www.linkedin.com">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="c-icon-a" ><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/><use xlink:href="#icon--linkedin"></use></svg>
+</a>
+
+
+
+
 <svg style="display: none">
-    <symbol id="icon--facebook" viewBox="0 0 24 24">
+    <symbol id="icon--facebook" viewBox="0 0 24 24"  >
         <path d="M19,4V7H17A1,1 0 0,0 16,8V10H19V13H16V20H13V13H11V10H13V7.5C13,5.56 14.57,4 16.5,4M20,2H4A2,2 0 0,0 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" />
     </symbol>
     <symbol id="icon--twitter" viewBox="0 0 24 24">
@@ -569,9 +553,6 @@ iniciar la renovación de su registro por otro periodo igual.</h4>
     <symbol id="icon--google" viewBox="0 0 24 24">
         <path d="M23,11H21V9H19V11H17V13H19V15H21V13H23M8,11V13.4H12C11.8,14.4 10.8,16.4 8,16.4C5.6,16.4 3.7,14.4 3.7,12C3.7,9.6 5.6,7.6 8,7.6C9.4,7.6 10.3,8.2 10.8,8.7L12.7,6.9C11.5,5.7 9.9,5 8,5C4.1,5 1,8.1 1,12C1,15.9 4.1,19 8,19C12,19 14.7,16.2 14.7,12.2C14.7,11.7 14.7,11.4 14.6,11H8Z" />
     </symbol>
-    <symbol id="icon--pinterest" viewBox="0 0 24 24">
-        <path d="M13,16.2C12.2,16.2 11.43,15.86 10.88,15.28L9.93,18.5L9.86,18.69L9.83,18.67C9.64,19 9.29,19.2 8.9,19.2C8.29,19.2 7.8,18.71 7.8,18.1C7.8,18.05 7.81,18 7.81,17.95H7.8L7.85,17.77L9.7,12.21C9.7,12.21 9.5,11.59 9.5,10.73C9.5,9 10.42,8.5 11.16,8.5C11.91,8.5 12.58,8.76 12.58,9.81C12.58,11.15 11.69,11.84 11.69,12.81C11.69,13.55 12.29,14.16 13.03,14.16C15.37,14.16 16.2,12.4 16.2,10.75C16.2,8.57 14.32,6.8 12,6.8C9.68,6.8 7.8,8.57 7.8,10.75C7.8,11.42 8,12.09 8.34,12.68C8.43,12.84 8.5,13 8.5,13.2A1,1 0 0,1 7.5,14.2C7.13,14.2 6.79,14 6.62,13.7C6.08,12.81 5.8,11.79 5.8,10.75C5.8,7.47 8.58,4.8 12,4.8C15.42,4.8 18.2,7.47 18.2,10.75C18.2,13.37 16.57,16.2 13,16.2M20,2H4C2.89,2 2,2.89 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" />
-    </symbol>
     <symbol id="icon--instagram" viewBox="0 0 24 24">
         <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
     </symbol>
@@ -579,16 +560,26 @@ iniciar la renovación de su registro por otro periodo igual.</h4>
         <path d="M12,20.45C10.81,20.45 10.1,19.94 9.47,19.5C9,19.18 8.58,18.87 8.08,18.79C6.93,18.73 6.59,18.79 5.97,18.9C5.86,18.9 5.73,18.87 5.68,18.69C5.5,17.94 5.45,17.73 5.32,17.71C4,17.5 3.19,17.2 3.03,16.83C3,16.6 3.07,16.5 3.18,16.5C4.25,16.31 5.2,15.75 6,14.81C6.63,14.09 6.93,13.39 6.96,13.32C7.12,13 7.15,12.72 7.06,12.5C6.89,12.09 6.31,11.91 5.68,11.7C5.34,11.57 4.79,11.29 4.86,10.9C4.92,10.62 5.29,10.42 5.81,10.46C6.16,10.62 6.46,10.7 6.73,10.7C7.06,10.7 7.21,10.58 7.25,10.54C7.14,8.78 7.05,7.25 7.44,6.38C8.61,3.76 11.08,3.55 12,3.55C12.92,3.55 15.39,3.76 16.56,6.38C16.95,7.25 16.86,8.78 16.75,10.54C16.79,10.58 16.94,10.7 17.27,10.7C17.54,10.7 17.84,10.62 18.19,10.46C18.71,10.42 19.08,10.62 19.14,10.9C19.21,11.29 18.66,11.57 18.32,11.7C17.69,11.91 17.11,12.09 16.94,12.5C16.85,12.72 16.88,13 17.04,13.32C17.07,13.39 17.37,14.09 18,14.81C18.8,15.75 19.75,16.31 20.82,16.5C20.93,16.5 21,16.6 20.97,16.83C20.81,17.2 20,17.5 18.68,17.71C18.55,17.73 18.5,17.94 18.32,18.69C18.27,18.87 18.14,18.9 18.03,18.9C17.41,18.79 17.07,18.73 15.92,18.79C15.42,18.87 15,19.18 14.53,19.5C13.9,19.94 13.19,20.45 12,20.45Z" />
     </symbol>
 </svg>
-</div>
+</div>	
+								
+							    
+
 								</div>
+
+
 				</div>
 		<div class = "StackCode">
 		<br>
-		<h5>Powered by  Stack code.</h5>
-		</div>
+		<a > Powered by </a> <a  href =https//www.google.com> Stack code.</a>
+
+		</div>	
+
 	</footer>
+
+
 </div>
 </div>
-	</div>
+
+	</div>		
 	</body>
 </html>
