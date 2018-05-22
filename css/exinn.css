@@ -559,8 +559,8 @@ transition: .7s;
  
 
 .contenedor{
- padding-left: 100px;
-    padding-right: 100px;
+ padding-left: 5%;
+    padding-right: 5%
   }
 
 .columns {
@@ -703,11 +703,9 @@ li{
 
 
 @media screen and (max-width: 800px) {
-
-
-.cd-pricing-container {
-  width: 100%;
-  max-width:none;
+.precioText
+{
+  margin-bottom: 50px;
 }
 
 
@@ -1191,6 +1189,10 @@ color:white;
 }
 .Act1{
   padding-bottom: 20px;
+}
+.cd-pricing-container {
+
+  margin:0;
 }
 
 }
@@ -1695,6 +1697,7 @@ height: 100%;
     float:left;
     padding-bottom: 60px;
     line-height:10px; font-size:60px;
+
 }
 .Texto h4 {
   margin-left: 8vh;
@@ -1735,36 +1738,45 @@ Main Components
 
 
 .cd-pricing-container {
-  width: 100%;
-  margin-right: 1%;
-  margin-left: 1%;
-  padding: 0;
-}
-
-
-.cd-pricing-container ul {
- 
-  padding: 0;
+  width: 90%;
+  max-width: 1170px;
+  margin: 2em auto;
 }
 
 
 
+  .cd-pricing-list {
+    margin:0;
+    padding-left: 0;
+    padding-right: 0;
+  }
 @media only screen and (min-width: 768px) {
 
  
   .cd-has-margins .cd-pricing-list > li {
-    width: 48%;
+    width: 46%;
     float: left;
-    margin-right: 2%;
-
+    margin-right: 3%;
     border-radius: 4px 4px 6px 6px;
     overflow: hidden;
+    margin-left: 3%;
   }
 
+
+  .cd-has-margins   li:hover {
+   
+
+  transform: scale(1.01);
+-webkit-transform: scale(1.01);
+-moz-transform: scale(1.01);
+-o-transform: scale(1.01);
+-ms-transform: scale(1.01);
+  }
 
   .cd-has-margins .cd-pricing-list > li:last-of-type {
     margin-right: 0;
     margin-left: 0;
+    padding: 0;
   }
   .cd-has-margins .cd-pricing-list > li::before {
     display: none;
@@ -1854,7 +1866,9 @@ Main Components
 }
 .cd-pricing-body ul{
     padding:0;
+    margin:0;
   }
+  
 .cd-pricing-features {
   width: 100%;
 }
@@ -1874,7 +1888,7 @@ Main Components
   text-overflow: ellipsis;
 }
 
-
+}
 
 
 .cd-pricing-footer {
@@ -1919,12 +1933,15 @@ Main Components
   }
   .no-touch .cd-select:hover {
     background-color: #112e3c;
+  transform: scale(1.05);
   }
   .cd-popular .cd-select {
     background-color: #e97d68;
+
   }
   .no-touch .cd-popular .cd-select:hover {
     background-color: #ec907e;
+    transform: scale(1.05);
   }
   
   .cd-has-margins .cd-select {
@@ -1934,6 +1951,6 @@ Main Components
   }
 
 }
-#Precios{
+ #Precios{
   padding-bottom: 50px;
  }
