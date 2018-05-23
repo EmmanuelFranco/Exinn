@@ -50,9 +50,9 @@ a{
 }
 
 li{
-  font-family: "Segoe UI",Arial,
+  font-family: "Segoe UI",Arial;
   color:black;
-  font-size: 20px;
+  font-size:20px;
 }
 
 
@@ -68,18 +68,14 @@ margin-top:10px;
 
   font-family: "Segoe UI",Arial,sans-serif; font-size: 16px;
   font-weight: 200;
-    margin:0;
-  
-   color:;
+  margin:0;
 }
 
  h5{
 
   font-family: "Segoe UI",Arial,sans-serif; font-size: 16px;
   font-weight: 200;
-    margin:0;
-  
-   color:;
+  margin:0;
 }
 
 
@@ -176,41 +172,37 @@ body{
   }
 
 .footer{  
-background: #252525;
-
+    background: #252525;
    left: 0;
    bottom: 0;
    width: 100%;
- 
+   padding-bottom:50px;
 }
 
-.footer span{}
 
 .StackCode{
-  background: #1c1c1c ;
-color:#767676;
+   background: #1c1c1c;
+   color:#767676;
    left: 0;
    bottom: 0;
    width: 100%;
+  
 }
-
-
-
+.icons h4 a{
+  font-size: 10px;
+}
 .wrapper {  
-padding-top: 50px; 
+padding-top:50px; 
 width: 90%; 
 max-width:1780px;
 margin: auto;
 overflow:hidden;
-font-language-override: 
-
-
 }
 
 .footer .wrapper{
-  padding-top: 30px;
-  display: flex;
-  justify-content: space-between;
+  padding-top:30px;
+  display:flex;
+  justify-content:space-between;
 }
 
 .footer img
@@ -295,15 +287,8 @@ background-color: #111011 ;
    overflow:hidden;
 
 }
+
 .background {background-image: url('../Images/background2.jpg');margin: 0px auto;}
-
-
-
-.slide1 {}
-
-.slide2 {}
-
-
  
 
 .wrap {
@@ -341,27 +326,17 @@ background-color: #111011 ;
    flex: 0.9;
 }
 
-
-.portada{
-}
 .portadaText{
   color: white;
   margin-left: 100px;
   display: inline-block;
-
 }
-
 
 .portadaText h3{
   font-family:'Open Sans';
   width: 200px;
   padding-left: 5px;
    font-weight: 400px;
-
-}
-
-.portadaText h3{
-
 }
 
 .propaganda {
@@ -376,7 +351,7 @@ font-size:30px;
 
 }
 .propaganda li{
-
+  color:white; 
 font-size: 25px;
 
 }
@@ -390,7 +365,6 @@ font-size: 25px;
     padding: 0px 10px 20px 10px;
     margin-left: 30px;
   margin-bottom: 30px;
-
   color:white;
 }
 
@@ -399,11 +373,6 @@ font-size: 25px;
   opacity: 1;
   margin-left: 1vh;
   width: 500px;
-  background-color:rgba(255,255,255,255.5);
- 
-  box-shadow: 1px 1px 2px #black inset,
-              -1px -1px 2px #fff inset;
-  border-radius: 25px; 
   margin-top: 7vh;  
 }
 
@@ -413,74 +382,6 @@ font-size: 25px;
   margin-top: 0;
   margin-bottom: 0 ;
 }
-
-
-
-.frase{ 
-    
-  
-    text-align: center;
-    margin-top: 50px;
-      
-}
-  
-
-.Seccionfrase{  
-  
-  background-color:#F5F5F5;
-    
-}
-
-
-  .p1 {
-  margin-left: 20%;
-  width: 33.3%;
-    padding: 8px;
-  }
-
-  .p1 img{
-    opacity: 1;
-    display: block;
-    height: auto;
-    transition: .5s ease; 
-    backface-visibility: hidden;
-  }
-
-  .p1:hover{
-     opacity: 0.3;
-  }
-  
-  
-
-
-.equipo img
- {
-  display: flex;
-  justify-content: space-between;
-
-  
-  margin-left: auto;
-  margin-right: auto;
-
-  max-width: 100%;
-  height: auto;
-  margin-top: 50px;
-
-}
-
-.tecnologias img
- {
-  display: flex;
-  justify-content: space-between;
-  float:left;
-  margin-left: 10%;
-  margin-right: 10%;
-  max-width: 100%;
-    height: auto;
-    margin-top : 5px;
-}
-
-
 .Act{
   width: 95%; 
   display: flex;
@@ -494,69 +395,45 @@ font-size: 25px;
   margin-right: auto;
   width: 33%;
 }
-
 .Act1 a:hover{
   cursor:pointer; 
 }
-
 .Act1 h3{
   font-size: 16px;
   font-family: "Segoe UI",Arial,sans-serif;
   font-weight: 600;
-  
 }
-
 .Act2 img{
      display: block;
     margin-left: auto;
     margin-right: auto;
-
 }
 
-
-
 .contacto{
-height: 100px;
+height: 110px;
 flex-wrap: wrap;
 }
 
-.contacto img{
-  height: 11px;  color:red;
-}
 
-
-.contacto span:hover{
+.contacto h4:hover{
 color:white;
 transition: .7s;
 }
 
-.col1,.col2{
-   height: 250px;
+.col1,{
+  height: 250px;
   display: flex;
   flex-direction: column;
-   
 }
 
 .col1 a{
   padding-top: 1vh;
-
 }
 
 .col1 link{
   margin-bottom: 2px;
   margin-top: 3px;
 }
-
-
-.formulario label, .sexo, .intereses{
-  margin-bottom: 10px;
-  margin-top: 5px;
-}
-  .formulario{
-    
-    margin:auto;
-  }
- 
 
 .contenedor{
  padding-left: 5%;
@@ -567,7 +444,6 @@ transition: .7s;
     float: left;
     width: 50%;
     padding: 8px; 
-
     margin-bottom: 100px;
 }
 
@@ -665,7 +541,9 @@ padding-top: 20px;
 
 }
 @media screen and (max-width: 1024px) {
-
+  #main{
+    height: 80vh;
+  }
 #c1 {
 display: none;
 }
@@ -703,23 +581,23 @@ li{
 
 
 @media screen and (max-width: 800px) {
-.precioText
-{
-  margin-bottom: 50px;
-}
+  
+.background{background-image: url('../Images/background8x6.jpg');margin: 0px auto;}
 
-
-  .columns{
+.columns{
 width: 100%;
-
 }
 .portadaText{
   padding-left: 0px;
   
 }
+.logotipo{
+  
+padding-top: 17px;
+}
 .smallMenu
 {
-padding-top: 20px;
+padding-top: 25px;
 }
 
 .portadaText h3{
@@ -959,6 +837,10 @@ display:none;
     p  { font-size: 14px}
 
     li  { font-size: 16px}
+    .background{background-image: url('../Images/background5.jpg');margin: 0px auto;}
+.nosotrosText h5{
+  font-size: 16px;
+}
 
 .header{
   display: inline-block;
@@ -979,7 +861,11 @@ height:100px;
      animation-name: none;
 
   }
-
+  .Act1{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
 
 .portadaText{
 
@@ -1695,7 +1581,7 @@ height: 100%;
 
  .Numero h2 {
     float:left;
-    padding-bottom: 60px;
+    margin-bottom: 100px;
     line-height:10px; font-size:60px;
 
 }
@@ -1751,7 +1637,9 @@ Main Components
     padding-right: 0;
   }
 @media only screen and (min-width: 768px) {
-
+  .menu{
+    padding-top:25px;
+  }
  
   .cd-has-margins .cd-pricing-list > li {
     width: 46%;
@@ -1832,6 +1720,7 @@ Main Components
   .cd-has-margins .cd-pricing-list > li, .cd-has-margins .cd-pricing-list > li.cd-popular
   {
     box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+    margin-bottom: 50px;
   }
   .cd-pricing-features li:nth-of-type(2n+1) {
     background-color: rgba(23, 61, 80, 0.06);
@@ -1867,6 +1756,7 @@ Main Components
 .cd-pricing-body ul{
     padding:0;
     margin:0;
+
   }
   
 .cd-pricing-features {
@@ -1886,6 +1776,7 @@ Main Components
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
 }
 
 }

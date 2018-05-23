@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
 
 	<!-- Script para deslizar!-->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
 		type="text/javascript" charset="utf-8"></script>
 
 		<script type="text/javascript" >
@@ -31,7 +31,7 @@
 
 
 
-		</script>
+</script>
 <script>
 	$("#slider > div:gt(0)").hide();
 
@@ -54,13 +54,11 @@ function navbarScroll() {
   var y = window.scrollY;
   if (y > 70) {
   	 $('.header').addClass('small');
-    $('.footer').addClass('smallerfooter');
     $('.menu').addClass('smallMenu');
      $('.logotipo').addClass('logotiposmall');
 		
 
   } else if (y < 70) {
-    $('.footer').removeClass('smallerfooter');
      $('.header').removeClass('small');
       $('.menu').removeClass('smallMenu');
        $('.logotipo').removeClass('logotiposmall');
@@ -82,7 +80,7 @@ app.controller('myCtrl', function($scope) {
 </script>
         	
 
-	<head>
+<head>
 		<title>Exinn</title>
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="css/exinn.css"/>
@@ -92,113 +90,90 @@ app.controller('myCtrl', function($scope) {
 
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
 		<link rel="stylesheet" type="text/css" media="@media screen and (max-width: 780px)" href="css/index.css" />
-		<link rel="stylesheet" type="text/css" media="@media screen and (max-width: 1300px)" href="css/index.css" />
-		<link rel="srylesheet" type="text/css" media= "@media screen and (max-width: 768px)" href="scss/index.css"/>
-		<link rel="srylesheet" type="text/css" media= "@media screen and (max-width: 1200px)" href="scss/index.css"/>
-
-
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<style type="text/css" media="screen">
 		A:link {color: white; text-decoration: none }
-		
 		A:visited {color: white; text-decoration: none }
 		#link { color: white; text-decoration: none }
-
 		</style>
-   		
 
- <script type="text/javascript">
-      	function ajaxObject(){
-      		var xmlhttp = false;
-      		try {
-      			xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-      		} catch (e) {
+<script type="text/javascript">
+	function ajaxObject(){
+		var xmlhttp = false;
+		try {
+			xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+		} catch (e) {
+			try {
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (E) {
+				xmlhttp = false; }
+		}
+		if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+		  xmlhttp = new XMLHttpRequest();
+		}
+		return xmlhttp;
+	}
+	function sendData(){
+	  //Recogemos los valores introducimos en los campos de texto
+		name = document.contact.name.value;
+		email = document.contact.email.value;
+		phone = document.contact.phone.value;
+	  	message = document.contact.textarea.value;
+		//instanciamos el objetoAjax
+		  ajax = ajaxObject();
+		//Abrimos una conexión AJAX pasando como parámetros el método de envío, y el archivo que realizará las operaciones deseadas
+		  ajax.open("POST", "https://exinn.com.ar/emailer.php", true);
+		  //cuando el objeto XMLHttpRequest cambia de estado, la función se inicia
+		  ajax.onreadystatechange = function() {
+			   //Cuando se completa la petición, mostrará los resultados
+			  if (ajax.readyState == 4){
+				  //El método responseText() contiene el texto de nuestro 'consultar.php'. Por ejemplo, cualquier texto que mostremos por un 'echo'
+				  alert(ajax.responseText);
+				}
+	  		}
+		  //Llamamos al método setRequestHeader indicando que los datos a enviarse están codificados como un formulario.
+		  ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		  //enviamos las variables a 'consulta.php'
+		  ajax.send("&name=" + name + "&email=" + email + "&phone=" + phone + "&message=" + message)
+  }
+</script>
 
-      			try {
-      				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-      			} catch (E) {
-      				xmlhttp = false; }
-      		}
-
-      		if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
-      		  xmlhttp = new XMLHttpRequest();
-      		}
-      		return xmlhttp;
-      	}
-
-        function sendData(){
-            //Recogemos los valores introducimos en los campos de texto
-        		name = document.contact.name.value;
-        		email = document.contact.email.value;
-            message = document.contact.textarea.value;
-
-        		//instanciamos el objetoAjax
-        		ajax = ajaxObject();
-
-        		//Abrimos una conexión AJAX pasando como parámetros el método de envío, y el archivo que realizará las operaciones deseadas
-        		ajax.open("POST", "http://exinn.com.ar/emailer.php", true);
-
-        		//cuando el objeto XMLHttpRequest cambia de estado, la función se inicia
-        		ajax.onreadystatechange = function() {
-                     //Cuando se completa la petición, mostrará los resultados
-        			if (ajax.readyState == 4){
-
-        				//El método responseText() contiene el texto de nuestro 'consultar.php'. Por ejemplo, cualquier texto que mostremos por un 'echo'
-        				alert(ajax.responseText);
-              }
-            }
-
-        		//Llamamos al método setRequestHeader indicando que los datos a enviarse están codificados como un formulario.
-        		ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-
-        		//enviamos las variables a 'consulta.php'
-        		ajax.send("&name=" + name + "&email=" + email + "&message=" + message)
-
-        }
-       
-    </script>
-	</head>
-	<body> 	
-
-
-
+</head>
+<body> 	
 <section id= "portada" class= "portada"> <!--Portada-->
-	<div class= "background">
+<div class= "background">
 		<div class="header" id=myHeader> <!--Header-->
-<div class="topnav">
-  <figure class= "logotipo"> <!-- Logotipo -->
+			<div class="topnav">
+  				<figure class= "logotipo"> <!-- Logotipo -->
 								<a href = index.html>
-										<img src ="./Images/logo2.png"  height="25" width="120" />
+									<img src ="./Images/logo2.png"  height="25" width="120" />
 								</a>
-								<a href  = index.html > </a>
-								</figure>
-  <div class="topnav-right">
-   
-									<nav class = "menu"> <!--menu-->
-										<ul >
-											<li>
-												<a href  = index.html style="float: right;" > Home</a>
-											</li>
-											<li>
-												<a href = #Registro  style="float: right;"> Registro de marca</a>
-											</li>
-											
-											<li>
-												<a href = #Legales  style="float: right;">  Departamento de Legales </a>
-											</li>
-											
-											<li>
-												<a href = #Precios  style="float: right;"> Precios </a>
-											</li>
+				</figure>
 
-											<li>
-											<a href = #footer  style="float: right;">  Contacto </a>
-											</li>
-										</ul>
-									</nav>
-  </div>
-</div>
+				<div class="topnav-right">
+										<nav class = "menu"> <!--menu-->
+											<ul>
+												<li>
+													<a href  = index.html style="float: right;" > Home</a>
+												</li>
+												<li>
+													<a href = #Registro  style="float: right;"> Registro de marca</a>
+												</li>	
+												<li>
+													<a href = #Legales  style="float: right;">  Departamento de Legales </a>
+												</li>
+												<li>
+													<a href = #Precios  style="float: right;"> Precios </a>
+												</li>
+
+												<li>
+													<a href = #footer  style="float: right;">  Contacto </a>
+												</li>
+											</ul>
+										</nav>
+				</div>
+			</div>
 		
 				<div id="menuToggle">
    
@@ -230,7 +205,7 @@ app.controller('myCtrl', function($scope) {
     									</ul>
 									
 								</div>				
-							</div>
+		</div>
 
 
 	
@@ -250,8 +225,7 @@ custodia por el tiempo que resta el trámite </li><li> te enviamos el título de
 en formato web y en soporte papel</li></h2><h3> todo sin ningún costo adicional!</h3></ul> </div>
 </div>
 </div>
-	 	
-
+	 	.
 	 	<div class = "portadaText" >
 					<h1 class="titulo" > Exinn</h1><!-- titulo -->
 					<h3 class="titulo-a" > Registro de marcas</h3><!-- resumen --> 
@@ -305,159 +279,142 @@ en formato web y en soporte papel</li></h2><h3> todo sin ningún costo adicional
 		<h3> ¿Cómo se registra una marca?</h3>
 												<h4>Se registran distintos tipo de marcas, ya sea compuesta por el nombre que identificara el producto o servicio, por un logo o por ambos.</h4>
 											
-														<div class = "box""> <div class="Numero"><h2>01</h2><div class="Texto"> <h4><strong>verificar la viabilidad:</strong> hacer un estudio preliminar y buscar los antecedentes que puedan tener la marca que se quiere registrar evitando  conflictos con las marcas que ya están registradas, pudiendo en caso de haber alguna similar correr el riesgo de una denegatoria o una oposición, con este examen previo se asegura el éxito de la solicitud que se presenta.</h4> </div></div></div>
+														<div class = "box"> <div class="Numero"><h2>01</h2><div class="Texto"> <h4><strong>verificar la viabilidad:</strong> hacer un estudio preliminar y buscar los antecedentes que puedan tener la marca que se quiere registrar evitando  conflictos con las marcas que ya están registradas, pudiendo en caso de haber alguna similar correr el riesgo de una denegatoria o una oposición, con este examen previo se asegura el éxito de la solicitud que se presenta.</h4> </div></div></div>
 
-
-			
-														<div class = "box""> <div class="Numero"><h2>02</h2><div class="Texto"> <h4><strong> Registro del cliente:</strong> ingresando sus datos personales a través de la web, via e mail, telefónicamente o personalmente se procesaran los datos para la solicitud que se presenta en el Instituto Nacional de Propiedad Industrial INPI y se emite la factura correspondiente.</h4> </div></div></div>
+														<div class = "box"> <div class="Numero"><h2>02</h2><div class="Texto"> <h4><strong> Registro del cliente:</strong> ingresando sus datos personales a través de la web, via e mail, telefónicamente o personalmente se procesaran los datos para la solicitud que se presenta en el Instituto Nacional de Propiedad Industrial INPI y se emite la factura correspondiente.</h4> </div></div></div>
 														
-														<div class = "box""> <div class="Numero"><h2>03</h2><div class="Texto"><h4><strong>Presentación en el registro:</strong> se presenta la solicitud con prioridad en el tiempo y sin gastos extras, con la inmediatez necesaria para asegurar su prioridad y el éxito del registro, se asignara un número de acta que será informado para que pueda tener un seguimiento personal de sus registros.</h4> </div></div></div>
+														<div class = "box"> <div class="Numero"><h2>03</h2><div class="Texto"><h4><strong>Presentación en el registro:</strong> se presenta la solicitud con prioridad en el tiempo y sin gastos extras, con la inmediatez necesaria para asegurar su prioridad y el éxito del registro, se asignara un número de acta que será informado para que pueda tener un seguimiento personal de sus registros.</h4> </div></div></div>
 												
-														<div class = "box""> <div class="Numero"><h2>04</h2><div class="Texto2"><h4><strong>Custodia: </strong> se realiza una custodia permanente durante todo el procedimiento, a fin de asegurar que todos los trámites legales <br>y administrativos que puedan presentarse, sean resuelto por nuestros especialistas en tiempo y forma.</h4> </div></div></div>
+														<div class = "box"> <div class="Numero"><h2>04</h2><div class="Texto2"><h4><strong>Custodia: </strong> se realiza una custodia permanente durante todo el procedimiento, a fin de asegurar que todos los trámites legales <br>y administrativos que puedan presentarse, sean resuelto por nuestros especialistas en tiempo y forma.</h4> </div></div></div>
 												
-														<div class = "box""> <div class="Numero"><h2>05	</h2><div class="Texto2"><h4><strong>Retiro y entrega del título de concesión de su marca registrada:</strong> finalizado el trámite, se le hará entrega vía web y en formato papel del título emitido por las autoridades del INPI, acreditando la titularidad de su marca por un plazo de 10 años.</h4>	 </div></div></div>
-												
+														<div class = "box"> <div class="Numero"><h2>05	</h2><div class="Texto2"><h4><strong>Retiro y entrega del título de concesión de su marca registrada:</strong> finalizado el trámite, se le hará entrega vía web y en formato papel del título emitido por las autoridades del INPI, acreditando la titularidad de su marca por un plazo de 10 años.</h4>	 </div></div></div>
+											
+																				
+	</div>	
 
-												
-										
-						</div>	
 		<div class= "cartas">
-<div class="wrapper2">
 
-	<div class="container" id="c0"><img src ="./Images/marca2.jpg" width= "100%" height="100%" / ></img>
-		<div class="image" id="i0">
-			<div class="carta">
-			<?xml version="1.0" encoding="utf-8"?>
+			<div class="wrapper2">
+				<div class="container" id="c0"><img src ="./Images/marca2.jpg" width= "100%" height="100%" / ></img>
+					<div class="image" id="i0">
+						<div class="carta">
+						<?xml version="1.0" encoding="utf-8"?>
+						</div>
+					</div>
+					<div class="story" id="s0">
+						<div class="info">
+						</div>
+					</div>
+				</div>
+				<div class="container" id="c1"><img src ="./Images/marca.jpg" width= "100%" height="100%" / ></img>
+					<div class="image" id="i1">
+						<div class="carta">
+						<?xml version="1.0" encoding="utf-8"?>
+						</div>
+					</div>
+					<div class="story" id="s1">
+						<div class="info">
+						</div>
+					</div>
+				</div>
+				<div class="container" id="c2"> <img src ="./Images/marca3.jpg" width= "100%" height="100%" / ></img>
+				</div>
+				<div class="container" id="c3">	 <img src ="./Images/marca5.jpg" width= "100%" height="100%" / ></img>
+				</div>
+				<div class="container" id="c4"><img src ="./Images/marca1.jpg" width= "100%" height="100%" / ></img>
 			</div>
-		</div>
-		<div class="story" id="s0">
-			<div class="info">
-			</div>
-		</div>
-	</div>
-	<div class="container" id="c1"><img src ="./Images/marca.jpg" width= "100%" height="100%" / ></img>
-		<div class="image" id="i1">
-			<div class="carta">
-			<?xml version="1.0" encoding="utf-8"?>
-			</div>
-		</div>
-		<div class="story" id="s1">
-			<div class="info">
-			</div>
-		</div>
-	</div>
-	<div class="container" id="c2"> <img src ="./Images/marca3.jpg" width= "100%" height="100%" / ></img>
-	</div>
-	<div class="container" id="c3">	 <img src ="./Images/marca5.jpg" width= "100%" height="100%" / ></img>
-	</div>
-	<div class="container" id="c4"><img src ="./Images/marca1.jpg" width= "100%" height="100%" / ></img>
-		 
-	</div>
 
-</div>
-		</div>
-</section>
+			</div>
+
+	</section>
 
 <section id="Nosotros">
 	<div class ="wrapper">
-
-	
-	<h2 align="center">¿Porque elegirnos?</h2>
-		<div class ="nosotrosText"> 
-			<h5>
-			EXINN brinda el servicio más eficiente, los mejores precios y la seguridad de no pagar costos adicionales por la presentación inmediata de la solicitud en el INPI, ni gastas adicionales por emisión del título de concesión.<br>
-			Somos un equipo de trabajo que garantiza una atención personalizada y un seguimiento de cada registro, procurando el éxito hasta la finalización. Otorgamos además el servicio de vigilancia y mantenemos un contacto permanente en caso de necesitar resolver cualquier consulta.<br>
-			</h5>
-		
+		<h2 align="center">¿Porque elegirnos?</h2>
+			<div class ="nosotrosText"> 
+				<h5>
+				EXINN brinda el servicio más eficiente, los mejores precios y la seguridad de no pagar costos adicionales por la presentación inmediata de la solicitud en el INPI, ni gastos adicionales por emisión del título de concesión.<br>
+				Somos un equipo de trabajo que garantiza una atención personalizada y un seguimiento de cada registro, procurando el éxito hasta la finalización. Otorgamos además el servicio de vigilancia y mantenemos un contacto permanente en caso de necesitar resolver cualquier consulta.<br>
+				</h5>
 		<br></div>
 	</div>
 </section>
 
 <section id= "Legales">
-		
 	<div class = "wrapper">
-
-	<h3 > Departamento de Legales:	</h3>	
-	<h4><br> EXINN brinda el servicio de registro de marcas garantizando que todo el proceso de la registración esta supervisado por profesionales en la materia; agentes de la propiedad Industrial y Abogados.
-Sabemos muy bien que el ámbito de comercialización de Productos y Servicios contiene áreas del derecho empresarial y comercial que en ocasiones presentas consultas jurídicas en distintos ámbitos, es por ello que en el Departamento de Legales contamos con abogados especializados en:
-</h4>
-
-<div class= "Act"> 
-								<div class= "Act1" > 
-														<div class = "Act2"> 
-														<img src ="./Images/android.png" width= "70" / >
-														</div>
-														<h4 align="center">Derecho  de propiedad <br>intelectual</h4>
-												</div>	
+		<h3> Departamento de Legales:</h3>	
+		<h4><br> EXINN brinda el servicio de registro de marcas garantizando que todo el proceso de la registración esta supervisado por profesionales en la materia; agentes de la propiedad Industrial y Abogados.
+		Sabemos muy bien que el ámbito de comercialización de Productos y Servicios contiene áreas del derecho empresarial y comercial que en ocasiones presentas consultas jurídicas en distintos ámbitos, es por ello que en el Departamento de Legales contamos con abogados especializados en:
+		</h4>
+									<div class= "Act"> 
+										<div class= "Act1" > 
+											<div class = "Act2"> 
+											<img src ="./Images/android.png" width= "70" / >
+											</div>
+											<h4 align="center">Derecho  de propiedad <br>intelectual</h4>
+										</div>	
 									
-									<div class= "Act1" > 
-										<div class = "Act2"> 
-										<img src ="./Images/commerce.png" width= "70"/ >
-										</div>
-										<h4 align="center">Derecho Comercial</h4>
+										<div class= "Act1" > 
+											<div class = "Act2"> 
+											<img src ="./Images/commerce.png" width= "70"/ >
+											</div>
+											<h4 align="center">Derecho Comercial</h4>
 										</div>
 
-											<div class= "Act1" > 
-									
+										<div class= "Act1" > 
 											<div class = "Act2"> 
 											<img src ="./Images/pc.png" width= "70" / >
 											</div>	
 											<h4 align="center">Derecho tributario</h4>
-											</div>
-										<div class= "Act1" > 
-												
-														<div class = "Act2"> 
-														<img src ="./Images/society.png" width= "70" / >
-														</div>	
-														<h4 align="center">Derecho Societario</h4>
-														</div>	
-							
-</div>	
-
-				
-				<div class= "Act"> 
-													
-													<div class= "Act1" > 
-														
-															<div class = "Act2"> 
-														<img src ="./Images/mediacion.png" width= "70"/ >
-														</div>
-														
-														<h4 align="center">Litigios, mediación y<br>  arbitraje</h4>
-													</div>
-														<div class= "Act1" > 
-												
-														<div class = "Act2"> 
-														<img src ="./Images/laboral.png" width= "70" / >
-														</div>	
-														<h4 align="center">Derecho Laboral</h4>
-														</div>
-												
-													<div class= "Act1" > 
-														<div class = "Act2"> 
-														<img src ="./Images/empresarial.png" width= "70" / >
-														</div>
-														<h4 align="center">Derecho empresarial</h4>
-													</div>		
-												<div class= "Act1" > 
-										<div class = "Act2"> 
-										<img src ="./Images/web.png" width= "70"/ >
 										</div>
-										<h4 align="center">Derecho Aduanero</h4>
-									</div>
-														
-					</div>			
+										<div class= "Act1" > 
+											<div class = "Act2"> 
+											<img src ="./Images/society.png" width= "70" / >
+											</div>	
+											<h4 align="center">Derecho Societario</h4>
+										</div>	
+									</div>	
 
+									<div class= "Act"> 
+										<div class= "Act1" > 
+											<div class = "Act2"> 
+											<img src ="./Images/mediacion.png" width= "70"/ >
+											</div>
+											<h4 align="center">Litigios, mediación y<br>  arbitraje</h4>				
+										</div>
+
+									<div class= "Act1" > 
+										<div class = "Act2"> 
+											<img src ="./Images/laboral.png" width= "70" / >
+											</div>	
+											<h4 align="center">Derecho Laboral</h4>
+									</div>
+												
+									<div class= "Act1" > 
+										<div class = "Act2"> 
+											<img src ="./Images/empresarial.png" width= "70" / >
+											</div>
+											<h4 align="center">Derecho empresarial</h4>
+										</div>		
+
+									<div class= "Act1" > 
+										<div class = "Act2"> 
+											<img src ="./Images/web.png" width= "70"/ >
+											</div>
+											<h4 align="center">Derecho Aduanero</h4>
+										</div>			
+									</div>			
+	</div>
+	
+		<div class="wrapper">
+			<h4 align="center" >*Todos los profesionales estan dispuestos a resolver las consultas que puedan plantear sin ningún costo, otorgando beneficios y descuentos importantes a los clientes de registro de marcas.</h4>
 		</div>
-<div class="wrapper">
-					<h4 align="center" >*Todos los profesionales estan dispuestos a resolver las consultas que puedan plantear sin ningún costo, otorgando beneficios y descuentos importantes a los clientes de registro de marcas.</h4></div>
 
 </section>
 <section class= "Precios" id= "Precios"> 
-
 <div class="wrapper">
 	<div class = "contenedor">
-<h1 style="text-align:center" id ="price" >Precios</h1>
+		<h1 style="text-align:center" id ="price" >Precios</h1>
 
 				<div class="cd-pricing-container cd-has-margins">
 
@@ -488,7 +445,7 @@ Sabemos muy bien que el ámbito de comercialización de Productos y Servicios co
 					<a class="cd-select" href="exinn.html">Seleccionar</a>
 				</footer> <!-- .cd-pricing-footer -->
 				<h4 class="precioText" >*Brindando la posibilidad de oponerse a los mismos para garantizar la
-				originalidad de su marca registrada.<br> </h4>º
+				originalidad de su marca registrada.<br> </h4>
 			</li>
 			<li class="cd-popular">
 				<header class="cd-pricing-header">
@@ -515,11 +472,11 @@ Sabemos muy bien que el ámbito de comercialización de Productos y Servicios co
 				<footer class="cd-pricing-footer">
 					<a class="cd-select" href="">Select</a>
 				</footer> <!-- .cd-pricing-footer --><h4>*10 años cuales cubre el periodo de vigencia de su concesión y se lo alertara en tiempo para
-iniciar la renovación de su registro por otro periodo igual.</h4>
+				iniciar la renovación de su registro por otro periodo igual.</h4>
 		
 			</li>
-		</ul> <!-- .cd-pricing-list -->
-	</div> <!-- .cd-pricing-container -->	
+				</ul> <!-- .cd-pricing-list -->
+			</div> <!-- .cd-pricing-container -->	
 		<div > 
 
 </div>
@@ -530,12 +487,8 @@ iniciar la renovación de su registro por otro periodo igual.</h4>
 
 </section>
 
-		
 			<footer class= "footer">
-
-
 				<div class= "wrapper">
-
 						<div class= "contacto">
 						<h2> Contacto </h2>
 						<a href="tel:+573024456678"><h4><i class="fas fa-phone-square" style="font-size:16px; color:grey;" ></i> +573024456678</h4></a>
@@ -543,7 +496,7 @@ iniciar la renovación de su registro por otro periodo igual.</h4>
 						<br>
 						
 						</div>
-<img src ="./Images/logo2.png"  height=20% width="100" />
+				<img src ="./Images/logo2.png"  height=20% width="100" />
 
 						<div class="col1"> 
 							<h2>Social media </h2>
@@ -553,7 +506,7 @@ iniciar la renovación de su registro por otro periodo igual.</h4>
     <svg class="c-icon"><use xlink:href="#icon--facebook"></use></svg>
 </a>
 
-<a href="https://www.instagram.com" class="c-link c-link--instagram c-tooltip" >
+<a href="https://www.instagram.com/exinnarg/" class="c-link c-link--instagram c-tooltip" >
     <svg class="c-icon"><use xlink:href="#icon--instagram"></use></svg>
 </a>
 
@@ -584,25 +537,19 @@ iniciar la renovación de su registro por otro periodo igual.</h4>
 </div>	
 								
 
-								</div>
+						</div>
 
 
 				</div>
-		<div class = "StackCode"  align="center">
-		<br>
+		
+			</footer>
 
-		<a > Powered by </a> <a  href =https//www.google.com> Stack code.</a>
-							    
-<div> <h4> Icons made by <a href="https://www.flaticon.com/authors/mynamepong" title="mynamepong">mynamepong</a> and <a href="http://www.freepik.com" title="Freepik">Freepik</a>  from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a> <h4>	
-
-		</div>	
-
-	</footer>
-
-
-</div>
-</div>
-
-	</div>		
-	</body>
+			<div class = "StackCode" align="center" >
+				
+					<div ><a> Powered by </a> <a  href =https//www.google.com> Stack code.</a></div>
+						
+					<div class="icons"> <h4> Icons made by <a href="https://www.flaticon.com/authors/mynamepong" title="mynamepong">mynamepong</a> and <a href="http://www.freepik.com" title="Freepik">Freepik</a>  from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a> <h4>	
+					</div>	
+			
+</body>
 </html>
