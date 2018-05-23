@@ -127,7 +127,7 @@ margin-top:10px;
   }
 
   .logotiposmall img{
-margin-top: 18px;
+margin-top: 20px;
   }
   
 .consulta h2{
@@ -371,9 +371,8 @@ font-size: 25px;
 .box{
   float: left;
   opacity: 1;
-  margin-left: 1vh;
   width: 500px;
-  margin-top: 7vh;  
+  margin-top: 4vh;  
 }
 
 
@@ -383,7 +382,7 @@ font-size: 25px;
   margin-bottom: 0 ;
 }
 .Act{
-  width: 95%; 
+  width: 100%; 
   display: flex;
   justify-content: space-between;
   float:left;
@@ -482,17 +481,14 @@ transition: .7s;
 
  margin: 0;
  }
-.smallMenu
-{
-padding-top: 20px;
-}
+
 #slider{
   height: 400px;
 
 }
 
 .portadaText{
-  margin-left: 80px;
+  margin-left: 4vh;
 }
 .propaganda h3{
 font-size: 25px;
@@ -533,10 +529,7 @@ font-size: 19px;
   width: 100%;
 }
 
-.smallMenu
-{
-padding-top: 20px;
-}
+
 
 
 }
@@ -593,7 +586,7 @@ width: 100%;
 }
 .logotipo{
   
-padding-top: 17px;
+padding-top: 14px;
 }
 .smallMenu
 {
@@ -822,25 +815,30 @@ display:none;
 
   }
 
+
 @media screen and (max-width: 500px) {
 
-    h1 { font-size: 35px}
+    h1 { font-size: 2.8rem}
 
-    h2 { font-size: 25px}
+    h2 { font-size: 1.6rem}
 
-    h3 { font-size: 20px}
+    h3 { font-size: 1.8rem}
 
-    h5 { font-size: 18px}
+    h5{font-size:1.4rem}
 
     a  { font-size: 10px, }
 
     p  { font-size: 14px}
 
-    li  { font-size: 16px}
+    li  { font-size: 1.4rem}
+
+    h4 { font-size: 1.4rem }
     .background{background-image: url('../Images/background5.jpg');margin: 0px auto;}
-.nosotrosText h5{
-  font-size: 16px;
-}
+
+
+
+.Numero {display:none;}
+.Texto h4{  width: 100%; margin-left: 0; margin-right: 0;}
 
 .header{
   display: inline-block;
@@ -1010,7 +1008,7 @@ color:white;
 #menu
 {
     position: absolute;
-    width: 111%;
+    width: 113%;
   height: 923px;
   margin: -100px 0 0 -50px;
   padding: 50px;
@@ -1422,12 +1420,6 @@ inputield */
 
 
 
-#Registro h4{
-  padding-bottom: 20px;
-}
-
-
-
 
 #Nosotros{
   padding-bottom: 50px;
@@ -1575,24 +1567,20 @@ height: 100%;
 }
 
 
-
-
-
-
- .Numero h2 {
-    float:left;
-    margin-bottom: 100px;
-    line-height:10px; font-size:60px;
-
+.Numero h2 {
+float:left;
+margin-bottom: 100px;
+line-height:10px; font-size:60px;
+margin-right: 1vh;
 }
+
 .Texto h4 {
-  margin-left: 8vh;
+
   padding-top: 10px;
    
 }
 
 .Texto2 h4 {
-  margin-left: 8vh;
   padding-top: 20px;
    
 }
@@ -1636,11 +1624,17 @@ Main Components
     padding-left: 0;
     padding-right: 0;
   }
+@media only screen and (max-width: 768px) {
+   .smallMenu{
+    padding-top:24px;
+  } 
+
+}
+
 @media only screen and (min-width: 768px) {
-  .menu{
-    padding-top:25px;
-  }
- 
+
+
+
   .cd-has-margins .cd-pricing-list > li {
     width: 46%;
     float: left;
@@ -1675,7 +1669,6 @@ Main Components
     padding: 2.5em 0;
   }
 }
-
 
 .cd-pricing-header {
     height: auto;
